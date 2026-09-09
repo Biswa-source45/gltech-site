@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 100" width="100%" height="100%">
+  <!-- Background transparent -->
+  <g transform="translate(10, 10)">
+    <!-- BHU Circular Seal -->
+    <circle cx="40" cy="40" r="38" fill="#5c0606" stroke="#d4af37" stroke-width="2.5"/>
+    <circle cx="40" cy="40" r="34" fill="none" stroke="#d4af37" stroke-width="1" stroke-dasharray="2,2"/>
+    <circle cx="40" cy="40" r="24" fill="#7a0808" stroke="#d4af37" stroke-width="1.5"/>
+    
+    <!-- Rising Sun Rays -->
+    <path d="M40 20 L40 17 M30 23 L28 20 M50 23 L52 20 M24 30 L21 28 M56 30 L59 28" stroke="#ffd700" stroke-width="1.5" stroke-linecap="round"/>
+    
+    <!-- Open Book of Knowledge -->
+    <path d="M30 42 Q40 37 40 43 Q40 37 50 42 L50 48 Q40 44 40 49 Q40 44 30 48 Z" fill="#fff8dc" stroke="#d4af37" stroke-width="1"/>
+    <line x1="40" y1="43" x2="40" y2="49" stroke="#d4af37" stroke-width="1"/>
+    
+    <!-- Lotus Emblem Base -->
+    <path d="M28 50 Q34 45 40 50 Q46 45 52 50 Q46 55 40 53 Q34 55 28 50 Z" fill="#ffd700"/>
+    <path d="M32 50 Q40 42 48 50" fill="none" stroke="#d4af37" stroke-width="1.5"/>
+
+    <!-- Seal Ring Sanskrit & Stars -->
+    <circle cx="21" cy="40" r="1.5" fill="#ffd700"/>
+    <circle cx="59" cy="40" r="1.5" fill="#ffd700"/>
+  </g>
+
+  <!-- Typography -->
+  <text x="100" y="44" font-family="'Inter', 'Roboto', sans-serif" font-weight="900" font-size="22" fill="#5c0606" letter-spacing="0.5">BHU VARANASI</text>
+  <text x="100" y="64" font-family="'Inter', 'Roboto', sans-serif" font-weight="700" font-size="12" fill="#8b0000" letter-spacing="1">BANARAS HINDU UNIVERSITY</text>
+  <text x="100" y="78" font-family="'Inter', 'Roboto', sans-serif" font-weight="600" font-size="9" fill="#b8860b">Central University · Govt. of India</text>
+</svg>

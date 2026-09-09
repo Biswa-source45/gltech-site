@@ -1,0 +1,327 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-display: 'Montserrat', 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  --color-brand-primary: #0052CC; /* Atlassian Classic Blue */
+  --color-brand-secondary: #0747A6; /* Atlassian Darker Blue */
+  --color-brand-accent: #00B8D9; /* Atlassian Cyan */
+  --color-brand-light: #DEEBFF;
+  --color-brand-dark: #091E42; /* Atlassian Deep Dark Blue */
+  
+  --animate-marquee: marquee 30s linear infinite;
+  --animate-marquee-reverse: marquee-reverse 30s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 15s ease-in-out infinite;
+  --animate-fade-in: fade-in 1s ease-out forwards;
+  --animate-slide-up: slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-spin-slow: spin 45s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-33.3333%); }
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-33.3333%); }
+  100% { transform: translateX(0%); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { transform: scale(1) translate(0px, 0px); opacity: 0.2; }
+  33% { transform: scale(1.15) translate(40px, -30px); opacity: 0.35; }
+  66% { transform: scale(0.9) translate(-30px, 40px); opacity: 0.25; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes draw-line {
+  from { stroke-dashoffset: 300; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes glare-loop {
+  0% { transform: translateX(-150%) skewX(-20deg); opacity: 0; }
+  15% { opacity: 1; }
+  35% { transform: translateX(250%) skewX(-20deg); opacity: 0; }
+  100% { transform: translateX(250%) skewX(-20deg); opacity: 0; }
+}
+
+.animate-glare-loop {
+  animation: glare-loop 4.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Lenis smooth scrolling styles */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #f8fafc; /* slate-50 */
+  color: #091e42; /* Atlassian Deep Dark Blue */
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+/* Custom scrollbar for modern aesthetics */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0052cc;
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom fade effects */
+.mask-horizontal-fades {
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+/* Glaze sweep loop animation - sweeps for ~1s, then rests for ~2s */
+@keyframes glaze-sweep {
+  0% { transform: skewX(12deg) translateX(-180%); }
+  35% { transform: skewX(12deg) translateX(250%); }
+  100% { transform: skewX(12deg) translateX(250%); }
+}
+
+.animate-glaze-loop {
+  animation: glaze-sweep 3s ease-in-out infinite;
+}
+
+/* ─── CTA Section — CSS orbs (GPU compositor only, zero JS) ─── */
+@keyframes cta-orb-drift-a {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(40px, -28px) scale(1.15); }
+  66%       { transform: translate(-24px, 20px) scale(0.92); }
+}
+@keyframes cta-orb-drift-b {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  40%       { transform: translate(-36px, 22px) scale(1.1); }
+  75%       { transform: translate(28px, -18px) scale(0.95); }
+}
+@keyframes cta-orb-drift-c {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%       { transform: translate(20px, 30px) scale(1.12); }
+}
+
+.cta-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(56px);
+  pointer-events: none;
+  will-change: transform;
+}
+.cta-orb-1 {
+  width: 340px; height: 340px;
+  top: 5%; left: 5%;
+  background: radial-gradient(circle, rgba(0,184,217,0.28) 0%, transparent 70%);
+  animation: cta-orb-drift-a 15s ease-in-out infinite;
+}
+.cta-orb-2 {
+  width: 300px; height: 300px;
+  top: 30%; left: 38%;
+  background: radial-gradient(circle, rgba(59,130,246,0.22) 0%, transparent 70%);
+  animation: cta-orb-drift-b 18s ease-in-out infinite;
+}
+.cta-orb-3 {
+  width: 280px; height: 280px;
+  top: 15%; right: 5%;
+  background: radial-gradient(circle, rgba(7,71,166,0.28) 0%, transparent 70%);
+  animation: cta-orb-drift-c 12s ease-in-out infinite;
+}
+
+/* ─── Mobile: touch devices — disable rubber-band on html ─── */
+@media (max-width: 767px) {
+  html.lenis {
+    overscroll-behavior: none;
+  }
+}
+
+
+/* ─── Performance & GPU Promotion ─── */
+
+/* Promote all Framer Motion elements to their own compositor layer */
+[data-framer-component-type],
+[style*="will-change"] {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Smooth font rendering across all text */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* NOTE: .group isolation removed — it breaks dropdown stacking contexts */
+
+/* Stable transform context for hover cards — prevents subpixel jitter */
+.motion-card {
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Respect user's reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ─── Careers Page: Loader (brand-colored version of SchawnnahJ loader) ─── */
+.careers-loader {
+  position: relative;
+  width: 2.5em;
+  height: 2.5em;
+  transform: rotate(165deg);
+  font-size: 18px; /* controls scale */
+}
+
+.careers-loader::before,
+.careers-loader::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 0.25em;
+  transform: translate(-50%, -50%);
+}
+
+.careers-loader::before {
+  animation: careers-before 2s infinite;
+}
+
+.careers-loader::after {
+  animation: careers-after 2s infinite;
+}
+
+@keyframes careers-before {
+  0% {
+    width: 0.5em;
+    box-shadow: 1em -0.5em rgba(0, 184, 217, 0.85), -1em 0.5em rgba(0, 82, 204, 0.85);
+  }
+  35% {
+    width: 2.5em;
+    box-shadow: 0 -0.5em rgba(0, 184, 217, 0.85), 0 0.5em rgba(0, 82, 204, 0.85);
+  }
+  70% {
+    width: 0.5em;
+    box-shadow: -1em -0.5em rgba(0, 184, 217, 0.85), 1em 0.5em rgba(0, 82, 204, 0.85);
+  }
+  100% {
+    box-shadow: 1em -0.5em rgba(0, 184, 217, 0.85), -1em 0.5em rgba(0, 82, 204, 0.85);
+  }
+}
+
+@keyframes careers-after {
+  0% {
+    height: 0.5em;
+    box-shadow: 0.5em 1em rgba(7, 71, 166, 0.85), -0.5em -1em rgba(0, 115, 230, 0.85);
+  }
+  35% {
+    height: 2.5em;
+    box-shadow: 0.5em 0 rgba(7, 71, 166, 0.85), -0.5em 0 rgba(0, 115, 230, 0.85);
+  }
+  70% {
+    height: 0.5em;
+    box-shadow: 0.5em -1em rgba(7, 71, 166, 0.85), -0.5em 1em rgba(0, 115, 230, 0.85);
+  }
+  100% {
+    box-shadow: 0.5em 1em rgba(7, 71, 166, 0.85), -0.5em -1em rgba(0, 115, 230, 0.85);
+  }
+}
+
+/* ─── Production Performance Fixes ─── */
+
+/* Optimize marquee performance — force GPU compositing */
+.animate-marquee,
+.animate-marquee-reverse {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Force consistent compositing for images — prevent subpixel jitter */
+img {
+  backface-visibility: hidden;
+}
+
+/* Stable compositing for dropdown panels — prevents paint on hover */
+nav .group > div {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Nav link — instant CSS-only micro-interaction */
+.nav-link {
+  transition: color 100ms ease,
+              background-color 100ms ease,
+              transform 100ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-link:hover {
+  transform: translateY(-1px) translateZ(0);
+}
+.nav-link:active {
+  transform: scale(0.97) translateZ(0);
+}

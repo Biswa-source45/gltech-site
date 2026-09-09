@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 100" width="100%" height="100%">
+  <g transform="translate(10, 15)">
+    <!-- Metallic T-Shield -->
+    <path d="M35 5 L65 15 L65 40 Q65 60 35 68 Q5 60 5 40 L5 15 Z" fill="#1c2833" stroke="#e67e22" stroke-width="2"/>
+    <path d="M18 20 L52 20 L52 28 L40 28 L40 56 L30 56 L30 28 L18 28 Z" fill="#e67e22"/>
+  </g>
+
+  <!-- Typography -->
+  <text x="86" y="46" font-family="'Inter', 'Roboto', sans-serif" font-weight="900" font-size="24" fill="#1c2833" letter-spacing="1">TOUGHERGO</text>
+  <text x="86" y="66" font-family="'Inter', 'Roboto', sans-serif" font-weight="700" font-size="11" fill="#e67e22" letter-spacing="0.5">TOUGHERGO PRIVATE LIMITED</text>
+  <text x="86" y="80" font-family="'Inter', 'Roboto', sans-serif" font-weight="600" font-size="9" fill="#7f8c8d">Industrial &amp; Enterprise Solutions</text>
+</svg>
