@@ -32,26 +32,32 @@ export default function Contact() {
     <div className="w-full bg-slate-50 font-sans">
       
       {/* 1. Header Banner */}
-      <section className="bg-gradient-to-r from-[#091E42] to-[#0d2a5c] text-white py-16 relative overflow-hidden">
-        <div className="absolute inset-0 z-0 pointer-events-none opacity-45">
+      <section className="bg-gradient-to-b from-white via-[#F8FAFC] to-[#F1F5F9] text-[#0F172A] py-16 relative overflow-hidden border-b border-slate-200/70">
+        <div className="absolute inset-0 opacity-[0.035] pointer-events-none" style={{
+          backgroundImage: 'linear-gradient(rgba(15,23,42,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(15,23,42,0.8) 1px, transparent 1px)',
+          backgroundSize: '56px 56px'
+        }} />
+        <div className="absolute top-0 right-0 w-[550px] h-[450px] pointer-events-none z-0" style={{ background: 'radial-gradient(ellipse at top right, rgba(14,165,233,0.12) 0%, rgba(56,189,248,0.06) 40%, transparent 70%)' }} />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[400px] pointer-events-none z-0" style={{ background: 'radial-gradient(ellipse at bottom left, rgba(6,182,212,0.1) 0%, rgba(14,165,233,0.05) 45%, transparent 70%)' }} />
+        <div className="absolute inset-0 z-0 pointer-events-none opacity-30">
           <FloatingLines 
             enabledWaves={['top', 'middle', 'bottom']}
-            lineCount={[12, 18, 24]}
-            lineDistance={[7, 5, 3]}
+            lineCount={[8, 12, 16]}
+            lineDistance={[8, 6, 4]}
             bendRadius={6.0}
             bendStrength={-0.6}
             interactive={true}
             parallax={true}
-            linesGradient={['#4073b3', '#0f1c57', '#f54575']}
+            linesGradient={['#0EA5E9', '#38BDF8', '#0284C7', '#06B6D4']}
           />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-4">
-          <span className="text-xs uppercase font-extrabold tracking-wider text-blue-400">Get In Touch</span>
-          <h1 className="text-3xl sm:text-5xl font-extrabold font-display tracking-tight text-white">
-            Contact GLOBX
+          <span className="text-xs uppercase font-extrabold tracking-wider text-sky-600">Get In Touch</span>
+          <h1 className="text-3xl sm:text-5xl font-extrabold font-display tracking-tight text-[#0F172A]">
+            Contact Us
           </h1>
-          <p className="text-slate-300 text-base sm:text-lg max-w-2xl font-light leading-relaxed">
-            Reach out to our Bhubaneswar operations office or submit a technical inquiry directly to our engineering team.
+          <p className="text-slate-600 text-base sm:text-lg max-w-2xl font-light leading-relaxed">
+            Get in touch with our team to discuss your IT system integration needs.
           </p>
         </div>
       </section>
@@ -65,10 +71,10 @@ export default function Contact() {
             
             <div className="space-y-4">
               <span className="text-xs uppercase font-extrabold tracking-wider text-blue-600">Offices & Support</span>
-              <h2 className="text-3xl font-bold font-display text-brand-dark tracking-tight">GLOBX Headquarters</h2>
-              <p className="text-slate-500 font-light text-sm sm:text-base leading-relaxed">
+              <h2 className="text-3xl font-bold font-display text-brand-dark tracking-tight">GL Tech Solutions Headquarters</h2>
+              {/* <p className="text-slate-500 font-light text-sm sm:text-base leading-relaxed">
                 Our main systems integration and client support center is located at Odyssa Business Centre, Rasulgarh, Bhubaneswar. Feel free to contact us during standard business hours.
-              </p>
+              </p> */}
             </div>
 
             <ul className="space-y-5 text-sm sm:text-base text-slate-600">
@@ -78,7 +84,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <span className="font-semibold text-brand-dark block text-xs uppercase tracking-wider text-slate-400">Headquarters Address</span>
-                  <span className="leading-relaxed text-sm">GLOBX System & Network Pvt. Ltd., Room No-208 & 209, 2nd Floor, Odyssa Business Centre, Rasulgarh, Bhubaneswar-751010</span>
+                  <span className="leading-relaxed text-sm"> GL Tech Solutions, Plot No- HIG/141, Kanan Vihar, Phase-1, Chadrashekharpur, Bhubaneswar - 751024</span>
                 </div>
               </li>
               <li className="flex gap-4 items-start">
@@ -86,9 +92,9 @@ export default function Contact() {
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="font-semibold text-brand-dark block text-xs uppercase tracking-wider text-slate-400">Corporate Contact</span>
+                  <span className="font-semibold text-brand-dark block text-xs uppercase tracking-wider text-slate-400">Contact</span>
                   <span className="text-sm">
-                    <a href="tel:+919124668102" className="hover:text-blue-600 transition-colors">+91 0674 2546464</a>
+                    <a href="tel:+919124668102" className="hover:text-blue-600 transition-colors">+91 8249671085</a>
                   </span>
                 </div>
               </li>
@@ -97,8 +103,8 @@ export default function Contact() {
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="font-semibold text-brand-dark block text-xs uppercase tracking-wider text-slate-400">Support Mail</span>
-                  <a href="mailto:business@globx.co.in" className="hover:text-blue-600 transition-colors text-sm">business@globx.co.in</a>
+                  <span className="font-semibold text-brand-dark block text-xs uppercase tracking-wider text-slate-400">Email</span>
+                  <a href="mailto:business@gltech.in" className="hover:text-blue-600 transition-colors text-sm">business@gltech.in</a>
                 </div>
               </li>
               <li className="flex gap-4 items-start">
@@ -108,9 +114,9 @@ export default function Contact() {
                 <div>
                   <span className="font-semibold text-brand-dark block text-xs uppercase tracking-wider text-slate-400">Business Timings</span>
                   <div className="text-xs text-slate-500 space-y-0.5 mt-0.5">
-                    <div>Monday - Saturday: 10:00 AM - 6:00 PM</div>
-                    <div>Sunday: Closed</div>
-                    <div className="italic">Note: Closed on 2nd & 4th Saturdays</div>
+                    <div>Monday - Friday: 9:00 AM - 6:00 PM</div>
+                    <div>Saturday - Sunday: Closed</div>
+                    {/* <div className="italic">Note: Closed on 2nd & 4th Saturdays</div> */}
                   </div>
                 </div>
               </li>
@@ -123,8 +129,8 @@ export default function Contact() {
               className="relative border border-slate-200/80 rounded-2xl overflow-hidden bg-slate-100 shadow-inner h-72 group cursor-default"
             >
               <iframe
-                title="GLOBX Headquarters Location Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59872.1085718906!2d85.80711909251602!3d20.29998625848554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a190bd65aa2ad1d%3A0xe69acb08745a4b10!2sOdyssa%20Business%20Centre!5e0!3m2!1sen!2sin!4v1782884757514!5m2!1sen!2sin"
+                title="GL Tech Solutions Headquarters Location Map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59872.1085718906!2d85.80711909251602!3d20.29998625848554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a190bd65aa2ad1d%3A0xe69acb08745a4b10!2sGL+Tech+Solutions!5e0!3m2!1sen!2sin!4v1782884757514!5m2!1sen!2sin"
                 className="w-full h-full border-0 transition-all duration-300"
                 allowFullScreen=""
                 loading="lazy"
@@ -132,7 +138,7 @@ export default function Contact() {
               ></iframe>
               <div className="absolute bottom-3 right-3 z-10">
                 <a
-                  href="https://maps.google.com/?q=Odyssa+Business+Centre,+Rasulgarh,+Bhubaneswar,+Odisha+751010"
+                  href="https://maps.google.com/?q=GL+Tech+Solutions,+Plot+No-+HIG/141,+Kanan+Vihar,+Phase-1,+Chadrashekharpur,+Bhubaneswar+-+751024"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-blue-600 hover:bg-blue-700 text-white font-bold text-[10px] uppercase tracking-wider px-3.5 py-1.5 rounded-lg inline-flex items-center gap-1 shadow-md hover:shadow-lg transition-all"
@@ -150,13 +156,13 @@ export default function Contact() {
             {!formSubmitted ? (
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="space-y-1">
-                  <h3 className="text-xl font-bold font-display text-brand-dark">Send an Inquiry</h3>
-                  <p className="text-xs text-slate-400 font-light">Fill out the fields below and our systems engineer will review the request.</p>
+                  <h3 className="text-xl font-bold font-display text-brand-dark">Send Us a Message</h3>
+                  {/* <p className="text-xs text-slate-400 font-light">Fill out the fields below and our systems engineer will review the request.</p> */}
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1.5">
-                    <label htmlFor="name" className="text-xs font-bold uppercase tracking-wider text-slate-500">Full Name *</label>
+                    <label htmlFor="name" className="text-xs font-bold uppercase tracking-wider text-slate-500">Your Full Name *</label>
                     <input
                       type="text"
                       id="name"
@@ -169,7 +175,8 @@ export default function Contact() {
                     />
                   </div>
                   <div className="space-y-1.5">
-                    <label htmlFor="email" className="text-xs font-bold uppercase tracking-wider text-slate-500">Email Address *</label>
+                    <label htmlFor="email" className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                      Your Email Address *</label>
                     <input
                       type="email"
                       id="email"
@@ -185,7 +192,7 @@ export default function Contact() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1.5">
-                    <label htmlFor="phone" className="text-xs font-bold uppercase tracking-wider text-slate-500">Telephone / Mobile *</label>
+                    <label htmlFor="phone" className="text-xs font-bold uppercase tracking-wider text-slate-500">Your Phone Number</label>
                     <input
                       type="tel"
                       id="phone"
@@ -198,7 +205,7 @@ export default function Contact() {
                     />
                   </div>
                   <div className="space-y-1.5">
-                    <label htmlFor="org" className="text-xs font-bold uppercase tracking-wider text-slate-500">Organization Name</label>
+                    <label htmlFor="org" className="text-xs font-bold uppercase tracking-wider text-slate-500">Company Name</label>
                     <input
                       type="text"
                       id="org"
@@ -211,8 +218,8 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="space-y-1.5">
-                  <label htmlFor="category" className="text-xs font-bold uppercase tracking-wider text-slate-500">Inquiry Category *</label>
+                {/* <div className="space-y-1.5">
+                  <label htmlFor="category" className="text-xs font-bold uppercase tracking-wider text-slate-500">Your Message *</label>
                   <select
                     id="category"
                     name="category"
@@ -227,10 +234,10 @@ export default function Contact() {
                     <option value="onedesk">OneDesk Product Demo</option>
                     <option value="other">Other System Integration Request</option>
                   </select>
-                </div>
+                </div> */}
 
                 <div className="space-y-1.5">
-                  <label htmlFor="message" className="text-xs font-bold uppercase tracking-wider text-slate-500">Requirements / Message *</label>
+                  <label htmlFor="message" className="text-xs font-bold uppercase tracking-wider text-slate-500">Your Message *</label>
                   <textarea
                     id="message"
                     name="message"
@@ -257,25 +264,25 @@ export default function Contact() {
               <div className="py-12 text-center space-y-6 animate-fade-in flex flex-col items-center">
                 <CheckCircle2 className="w-16 h-16 text-emerald-500" />
                 <div className="space-y-2">
-                  <h3 className="text-2xl font-bold font-display text-slate-900">Inquiry Logged Successfully</h3>
+                  <h3 className="text-2xl font-bold font-display text-slate-900">Thank You! </h3>
                   <p className="text-sm text-slate-500 max-w-sm mx-auto font-light">
-                    Your request has been routed to our technical support desk. A standby engineer will contact you shortly.
+                    We have received your Message Successfully. Our team will review your request and get back to you shortly.
                   </p>
                 </div>
 
-                <div className="bg-slate-50 rounded-2xl p-5 border border-slate-100 max-w-sm w-full">
+                {/* <div className="bg-slate-50 rounded-2xl p-5 border border-slate-100 max-w-sm w-full">
                   <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">OneDesk Support Ticket ID</span>
                   <span className="text-xl font-mono font-bold text-slate-800 tracking-wider mt-1 block">{ticketId}</span>
-                </div>
+                </div> */}
 
                 <button
                   onClick={() => {
                     setFormSubmitted(false);
-                    setFormData({ name: '', email: '', phone: '', org: '', category: 'it-infrastructure', message: '' });
+                    setFormData({ name: '', email: '', phone: '', org: '', message: '' });
                   }}
                   className="text-sm font-semibold text-blue-600 hover:text-blue-700 hover:underline cursor-pointer"
                 >
-                  Submit Another Inquiry
+                  Submit Inquiry
                 </button>
               </div>
             )}

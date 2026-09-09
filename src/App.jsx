@@ -11,6 +11,7 @@ import OneDesk from './pages/OneDesk';
 import Contact from './pages/Contact';
 import ServiceOrSolutionDetail from './pages/ServiceOrSolutionDetail';
 import Careers from './pages/Careers';
+import Services from './pages/Services';
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const [currentDetailId, setCurrentDetailId] = useState(null);
@@ -56,7 +57,7 @@ export default function App() {
       const page = parts[0];
       const detailId = parts[1] || null;
 
-      if (['home', 'about', 'it-infrastructure', 'networking-solutions', 'education-rd', 'onedesk', 'contact', 'careers'].includes(page)) {
+        if (['home', 'about', 'services', 'it-infrastructure', 'networking-solutions', 'education-rd', 'onedesk', 'contact', 'careers'].includes(page)) {
         return { page, detailId: null };
       } else if (['service-detail', 'solution-detail', 'industry-detail'].includes(page) && detailId) {
         return { page, detailId };
@@ -96,6 +97,8 @@ export default function App() {
         return <Home onNavigate={handleNavigate} />;
       case 'about':
         return <AboutUs />;
+      case 'services':
+        return <Services onNavigate={handleNavigate} />;
       case 'it-infrastructure':
         return <ITInfrastructure />;
       case 'networking-solutions':
@@ -118,7 +121,7 @@ export default function App() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-slate-50 text-[#091E42] selection:bg-blue-600 selection:text-white antialiased">
+    <div className="flex flex-col min-h-screen bg-[#F8FAFC] text-[#0F172A] selection:bg-blue-600 selection:text-white antialiased">
       <Navbar onNavigate={handleNavigate} currentPage={currentPage} />
 
       <main className={`flex-grow transition-opacity duration-250 ${fadeTrigger ? 'opacity-100' : 'opacity-0'}`}>

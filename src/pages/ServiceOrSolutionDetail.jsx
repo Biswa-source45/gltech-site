@@ -5,7 +5,6 @@ import highCourtOdisha from '../assets/Esteemsed_clients/highcourt-Odisha.png';
 
 // Local Assets for Solutions and Services
 import fiberNetwork from '../assets/fiber_network.png';
-import onedeskDashboard from '../assets/onedesk_dashboard.png';
 import onetrackDashboard from '../assets/onetrack_dashboard.png';
 import serverRacks from '../assets/server_racks.png';
 import teamCollaboration from '../assets/team_collaboration.png';
@@ -65,6 +64,72 @@ const detailsData = {
     ],
     techStack: "Odoo, SAP, Oracle NetSuite, Custom ERP Modules",
     image: onetrackDashboard
+  },
+
+  // GL TECH SERVICES
+  'desktop-integration': {
+    category: "GL Tech Services",
+    title: "Desktop Integration",
+    tagline: "Connected Workstations for Productive Teams",
+    icon: <Cpu className="w-8 h-8 text-blue-600" />,
+    desc: "Our desktop integration services ensure that workstations are seamlessly connected to your overall IT infrastructure, maximizing productivity and minimizing downtime.",
+    features: [
+      "Workstation deployment and configuration",
+      "Operating system installation and updates",
+      "Software installation and management",
+      "User account setup and management",
+      "Desktop security implementation"
+    ],
+    techStack: "Windows, Microsoft 365, Endpoint Management, Active Directory",
+    image: teamCollaboration
+  },
+  'networking-solutions': {
+    category: "GL Tech Services",
+    title: "Networking Solutions",
+    tagline: "Reliable Connectivity Across Your Organization",
+    icon: <Network className="w-8 h-8 text-cyan-600" />,
+    desc: "Our networking services provide reliable, high-performance connectivity throughout your organization, enabling efficient communication and data transfer.",
+    features: [
+      "LAN/WAN design and implementation",
+      "Network hardware installation and configuration",
+      "Wireless network implementation",
+      "VPN setup and configuration",
+      "Network monitoring and maintenance"
+    ],
+    techStack: "Cisco, Ruckus, Fortinet, Wi-Fi 6, SD-WAN, Fiber Networks",
+    image: fiberNetwork
+  },
+  'security-equipment': {
+    category: "GL Tech Services",
+    title: "Security Equipment",
+    tagline: "Layered Protection for Your Digital Environment",
+    icon: <Shield className="w-8 h-8 text-rose-600" />,
+    desc: "Our security integration services protect your valuable data and systems from threats and unauthorized access, ensuring business continuity.",
+    features: [
+      "Firewall installation and configuration",
+      "Intrusion detection and prevention systems",
+      "Endpoint security solutions",
+      "Security auditing and assessment",
+      "Data encryption solutions"
+    ],
+    techStack: "Fortinet, Sophos, Endpoint Protection, VPN, Encryption",
+    image: securitySolutionsImg
+  },
+  'cctv-solutions': {
+    category: "GL Tech Services",
+    title: "CCTV Solutions",
+    tagline: "Integrated Surveillance for Safer Premises",
+    icon: <Shield className="w-8 h-8 text-slate-700" />,
+    desc: "Our CCTV integration services provide comprehensive surveillance solutions to help secure your premises and assets, with clear visibility wherever you need it.",
+    features: [
+      "IP camera installation and configuration",
+      "Video management software setup",
+      "Remote monitoring solutions",
+      "Video storage and retrieval systems",
+      "Access control integration"
+    ],
+    techStack: "IP Cameras, NVR, VMS, Remote Monitoring, Access Control",
+    image: surveillanceSolutionsImg
   },
 
   // SOLUTIONS
@@ -165,17 +230,17 @@ const detailsData = {
     image: fiberNetwork
   },
   'server-storage-solutions': {
-    category: "Solutions",
-    title: "Server & Storage SAN/NAS Solutions",
-    tagline: "High-Availability Disk Arrays & Virtualization Layers",
+    category: "GL Tech Services",
+    title: "Server & Storage Solutions",
+    tagline: "Secure, Accessible, and Resilient Business Data",
     icon: <Database className="w-8 h-8 text-blue-700" />,
-    desc: "Consolidate corporate files on enterprise-class storage pools. We configure high-speed SAN/NAS cabinets with active disk replication to shield your databases from drive failures.",
+    desc: "Our server and storage integration services ensure that your data is accessible, secure, and properly managed throughout your organization.",
     features: [
-      "High-density SAN and NAS storage server cabinets (RAID configurations)",
-      "VMware ESXi and Microsoft Hyper-V virtualization host clustering",
-      "High-speed fiber channel switches connecting servers to SAN pools",
-      "Incremental backup routines and local snapshot configurations",
-      "Offsite database vaulting setups for ransomware recovery"
+      "Server hardware installation and configuration",
+      "Storage area network (SAN) implementation",
+      "Network-attached storage (NAS) solutions",
+      "Backup and disaster recovery solutions",
+      "Virtualization services"
     ],
     techStack: "Dell PowerStore, Synology RackStation, HPE MSA, Veeam Backups",
     image: serverStorageImg
@@ -260,28 +325,31 @@ export default function ServiceOrSolutionDetail({ detailId }) {
         className="w-full bg-[#f8fafc] font-sans"
       >
         {/* 1. Header Banner */}
-        <section className="bg-gradient-to-r from-[#091E42] to-[#0c2957] text-white py-24 relative overflow-hidden">
-          <div className="absolute inset-0 z-0 pointer-events-none opacity-45">
+        <section className="bg-gradient-to-b from-white via-[#F8FAFC] to-[#F1F5F9] text-[#0F172A] py-24 relative overflow-hidden border-b border-slate-200/70">
+          <div className="absolute inset-0 opacity-[0.035] pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(15,23,42,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(15,23,42,0.8) 1px, transparent 1px)', backgroundSize: '56px 56px' }} />
+          <div className="absolute top-0 right-0 w-[550px] h-[450px] pointer-events-none z-0" style={{ background: 'radial-gradient(ellipse at top right, rgba(14,165,233,0.12) 0%, rgba(56,189,248,0.06) 40%, transparent 70%)' }} />
+          <div className="absolute bottom-0 left-0 w-[500px] h-[400px] pointer-events-none z-0" style={{ background: 'radial-gradient(ellipse at bottom left, rgba(6,182,212,0.1) 0%, rgba(14,165,233,0.05) 45%, transparent 70%)' }} />
+          <div className="absolute inset-0 z-0 pointer-events-none opacity-30">
             <FloatingLines 
               enabledWaves={['top', 'middle', 'bottom']}
-              lineCount={[12, 18, 24]}
-              lineDistance={[7, 5, 3]}
+              lineCount={[8, 12, 16]}
+              lineDistance={[8, 6, 4]}
               bendRadius={6.0}
               bendStrength={-0.6}
               interactive={true}
               parallax={true}
-              linesGradient={['#4073b3', '#0f1c57', '#f54575']}
+              linesGradient={['#0EA5E9', '#38BDF8', '#0284C7', '#06B6D4']}
             />
           </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-4">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-400/20 text-xs font-semibold text-blue-300 uppercase tracking-wider">
-              <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 border border-sky-200 text-xs font-semibold text-sky-700 uppercase tracking-wider">
+              <span className="w-2 h-2 rounded-full bg-sky-500 animate-pulse" />
               Services & Specializations
             </span>
-            <h1 className="text-4.5xl sm:text-6xl font-extrabold font-display tracking-tight text-white leading-tight">
+            <h1 className="text-4.5xl sm:text-6xl font-extrabold font-display tracking-tight text-[#0F172A] leading-tight">
               Software Development
             </h1>
-            <p className="text-slate-300 text-lg sm:text-xl max-w-4xl font-light leading-relaxed">
+            <p className="text-slate-600 text-lg sm:text-xl max-w-4xl font-light leading-relaxed">
               Crafting robust, scalable, and secure custom applications designed to streamline operations, automate business logic, and drive productivity.
             </p>
           </div>
@@ -558,28 +626,31 @@ export default function ServiceOrSolutionDetail({ detailId }) {
     >
       
       {/* 1. Header Banner */}
-      <section className="bg-gradient-to-r from-[#091E42] to-[#0c2957] text-white py-20 relative overflow-hidden">
-        <div className="absolute inset-0 z-0 pointer-events-none opacity-45">
+      <section className="bg-gradient-to-b from-white via-[#F8FAFC] to-[#F1F5F9] text-[#0F172A] py-20 relative overflow-hidden border-b border-slate-200/70">
+        <div className="absolute inset-0 opacity-[0.035] pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(15,23,42,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(15,23,42,0.8) 1px, transparent 1px)', backgroundSize: '56px 56px' }} />
+        <div className="absolute top-0 right-0 w-[550px] h-[450px] pointer-events-none z-0" style={{ background: 'radial-gradient(ellipse at top right, rgba(14,165,233,0.12) 0%, rgba(56,189,248,0.06) 40%, transparent 70%)' }} />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[400px] pointer-events-none z-0" style={{ background: 'radial-gradient(ellipse at bottom left, rgba(6,182,212,0.1) 0%, rgba(14,165,233,0.05) 45%, transparent 70%)' }} />
+        <div className="absolute inset-0 z-0 pointer-events-none opacity-30">
           <FloatingLines 
             enabledWaves={['top', 'middle', 'bottom']}
-            lineCount={[12, 18, 24]}
-            lineDistance={[7, 5, 3]}
+            lineCount={[8, 12, 16]}
+            lineDistance={[8, 6, 4]}
             bendRadius={6.0}
             bendStrength={-0.6}
             interactive={true}
             parallax={true}
-            linesGradient={['#4073b3', '#0f1c57', '#f54575']}
+            linesGradient={['#0EA5E9', '#38BDF8', '#0284C7', '#06B6D4']}
           />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-4">
-          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-400/20 text-xs font-semibold text-blue-300 uppercase tracking-wider">
-            <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 border border-sky-200 text-xs font-semibold text-sky-700 uppercase tracking-wider">
+              <span className="w-2 h-2 rounded-full bg-sky-500 animate-pulse" />
             {currentData.category}
           </span>
-          <h1 className="text-4.5xl sm:text-5xl font-extrabold font-display tracking-tight text-white leading-tight">
+          <h1 className="text-4.5xl sm:text-5xl font-extrabold font-display tracking-tight text-[#0F172A] leading-tight">
             {currentData.title}
           </h1>
-          <p className="text-slate-300 text-base sm:text-lg max-w-3xl font-light leading-relaxed">
+          <p className="text-slate-600 text-base sm:text-lg max-w-3xl font-light leading-relaxed">
             {currentData.tagline}
           </p>
         </div>

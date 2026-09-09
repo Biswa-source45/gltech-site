@@ -4,11 +4,11 @@
   --font-sans: 'Inter', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --font-display: 'Montserrat', 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   
-  --color-brand-primary: #0052CC; /* Atlassian Classic Blue */
-  --color-brand-secondary: #0747A6; /* Atlassian Darker Blue */
-  --color-brand-accent: #00B8D9; /* Atlassian Cyan */
-  --color-brand-light: #DEEBFF;
-  --color-brand-dark: #091E42; /* Atlassian Deep Dark Blue */
+  --color-brand-primary: #0EA5E9; /* Sky 500 */
+  --color-brand-secondary: #0284C7; /* Sky 600 */
+  --color-brand-accent: #38BDF8; /* Sky 400 */
+  --color-brand-light: #E0F2FE; /* Sky 100 */
+  --color-brand-dark: #0C4A6E; /* Sky 900 */
   
   --animate-marquee: marquee 30s linear infinite;
   --animate-marquee-reverse: marquee-reverse 30s linear infinite;
@@ -89,8 +89,8 @@ html.lenis, html.lenis body {
 
 body {
   font-family: var(--font-sans);
-  background-color: #f8fafc; /* slate-50 */
-  color: #091e42; /* Atlassian Deep Dark Blue */
+  background-color: #F8FAFC;
+  color: #0F172A;
   overflow-x: hidden;
 }
 
@@ -112,7 +112,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #0052cc;
+  background: #0EA5E9;
 }
 
 /* Hide scrollbar utility */

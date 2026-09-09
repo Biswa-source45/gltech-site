@@ -1,135 +1,125 @@
 import { motion } from 'framer-motion';
-import { 
-  Sparkles, 
-  Target, 
-  Compass, 
-  Award, 
-  CheckCircle, 
-  MapPin, 
-  Calendar, 
-  Briefcase, 
+import {
+  Sparkles,
+  Target,
+  Compass,
+  CheckCircle,
+  MapPin,
+  Calendar,
+  Briefcase,
   Zap,
   Shield
-} from 'lucide-react';
-import teamCollaboration from '../assets/team_collaboration.png';
+} from 'lucide-react'; 
+import teamCollaboration from '../assets/solutions/About Us photo.jpg';
 import serverRacks from '../assets/server_racks.png';
 import fiberNetwork from '../assets/fiber_network.png';
 import FloatingLines from '../components/FloatingLines';
+import teamCollaborationTeam from '../assets/team_collaboration.png';
 
 export default function AboutUs() {
 
-  const milestones = [
-    {
-      year: "2011",
-      title: "The Genesis (GL Solutions)",
-      desc: "Founded as a regional IT system integration shop, serving local government departments and corporates in Odisha with hardware, peripherals, and initial LAN setups."
-    },
-    {
-      year: "2016",
-      title: "Campus Networks Expansion",
-      desc: "Expanded into high-performance campus networking, implementing large-scale structured cabling, smart Wi-Fi systems, and campus fiber loops."
-    },
-    {
-      year: "2021",
-      title: "Incorporation & Restructuring",
-      desc: "Restructured and incorporated as GLOBX System & Network Pvt. Ltd., shifting focus to enterprise-tier datacenter orchestration and fiber networks."
-    },
-    {
-      year: "2024",
-      title: "Next-Gen Software & AI",
-      desc: "Launched our proprietary OneDesk Ticket Management system and started integrating AI and telemetry-based monitoring into our core infrastructure services."
-    }
-  ];
-
   const values = [
     {
-      icon: <Target className="w-6 h-6 text-brand-primary" />,
-      title: "Client-First Architecture",
-      description: "We analyze each customer's workflow, traffic models, and physical site parameters to design custom, optimized network solutions rather than generic setups."
+      icon: <Shield className="w-6 h-6 text-brand-primary" />,
+      title: "Integrity",
+      description: "We conduct our business with the highest ethical standards, honesty, and transparency in all our dealings."
     },
     {
-      icon: <Shield className="w-6 h-6 text-cyan-600" />,
-      title: "Uncompromising Integrity",
-      description: "We deploy enterprise-grade hardware, authenticated software, and structured copper/optical cabling systems complying with rigorous ISO standards."
+      icon: <Zap className="w-6 h-6 text-cyan-600" />,
+      title: "Innovation",
+      description: "We continuously seek new ideas and solutions to help our clients stay ahead in a rapidly evolving technological landscape."
     },
     {
-      icon: <Compass className="w-6 h-6 text-indigo-600" />,
-      title: "SLA Response Execution",
-      description: "Our dedicated helpdesk operates on tight, contract-bound ticket resolution schedules, backed by regional standby hardware inventory for critical failovers."
+      icon: <Target className="w-6 h-6 text-sky-600" />,
+      title: "Collaboration",
+      description: "We work closely with our clients as true partners, understanding their unique challenges and developing solutions together."
     }
   ];
 
-  const certs = [
-    "Cisco Certified Network Professionals",
-    "Fortinet Network Security Experts",
-    "Microsoft Certified Systems Engineers",
-    "VMware Certified Professionals",
-    "RedHat Certified Architects",
-    "Veeam Certified Engineers",
-    "Ruckus Certified Wireless Experts"
-  ];
+  // const certs = [
+  //   "Cisco Certified Network Professionals",
+  //   "Fortinet Network Security Experts",
+  //   "Microsoft Certified Systems Engineers",
+  //   "VMware Certified Professionals",
+  //   "RedHat Certified Architects",
+  //   "Veeam Certified Engineers",
+  //   "Ruckus Certified Wireless Experts"
+  // ];
 
   return (
     <div className="w-full bg-[#f8fafc] text-slate-800 font-sans overflow-x-hidden">
-      
-      {/* 1. HERO SECTION */}
-      <section className="relative bg-gradient-to-br from-[#091E42] via-[#0d2a5c] to-slate-900 text-white pt-16 pb-24 sm:pt-20 sm:pb-32 overflow-hidden">
-        {/* Animated Network Background (ReactBits Floating Lines Style) */}
-        <div className="absolute inset-0 z-0 pointer-events-none opacity-45">
-          <FloatingLines 
+
+      {/* 1. HERO SECTION — CLEAN LIGHT ENTERPRISE WITH SKY BLUE ACCENTS */}
+      <section className="relative bg-gradient-to-b from-white via-[#F8FAFC] to-[#F1F5F9] text-[#0F172A] pt-16 pb-24 sm:pt-20 sm:pb-32 overflow-hidden border-b border-slate-200/70">
+        {/* Architectural Grid Overlay */}
+        <div className="absolute inset-0 opacity-[0.035] pointer-events-none" style={{
+          backgroundImage: 'linear-gradient(rgba(15,23,42,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(15,23,42,0.8) 1px, transparent 1px)',
+          backgroundSize: '56px 56px'
+        }} />
+
+        {/* Ambient Soft Sky / Cyan Glows (No purple/pink) */}
+        <div
+          className="absolute top-0 right-0 w-[600px] h-[500px] pointer-events-none z-0"
+          style={{ background: 'radial-gradient(ellipse at top right, rgba(14,165,233,0.12) 0%, rgba(56,189,248,0.06) 40%, transparent 70%)' }}
+        />
+        <div
+          className="absolute bottom-0 left-0 w-[500px] h-[450px] pointer-events-none z-0"
+          style={{ background: 'radial-gradient(ellipse at bottom left, rgba(6,182,212,0.1) 0%, rgba(14,165,233,0.05) 45%, transparent 70%)' }}
+        />
+
+        {/* Subtle Architectural Flow Lines in pure Sky/Cyan */}
+        <div className="absolute inset-0 z-0 pointer-events-none opacity-30">
+          <FloatingLines
             enabledWaves={['top', 'middle', 'bottom']}
-            lineCount={[12, 18, 24]}
-            lineDistance={[7, 5, 3]}
+            lineCount={[8, 12, 16]}
+            lineDistance={[8, 6, 4]}
             bendRadius={6.0}
             bendStrength={-0.6}
             interactive={true}
             parallax={true}
-            linesGradient={['#4073b3', '#0f1c57', '#f54575']}
+            linesGradient={['#0EA5E9', '#38BDF8', '#0284C7', '#06B6D4']}
           />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* Hero Text */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="lg:col-span-7 space-y-6"
             >
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-400/20 text-xs font-semibold text-blue-300 uppercase tracking-wider">
-                <Sparkles className="w-3.5 h-3.5" />
-                <span>Pioneering Enterprise IT Since 2011</span>
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-xs font-semibold text-sky-700 uppercase tracking-wider shadow-sm">
+                <Sparkles className="w-3.5 h-3.5 text-sky-600" />
+                <span>Trusted Enterprise Since 2005</span>
               </div>
-              
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-display tracking-tight leading-[1.1] text-white">
-                Pioneering the Future of <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Enterprise Networks</span>
-              </h1>
-              
-              <p className="text-slate-300 text-base sm:text-lg max-w-2xl font-light leading-relaxed">
-                From a regional hardware service provider to an incorporated systems engineering powerhouse, GLOBX delivers robust IT infrastructures, custom software solutions, and automated service management to public sector and corporate leaders.
-              </p>
 
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-display tracking-tight leading-[1.1] text-[#0F172A]">
+                About <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-sky-600 to-cyan-500">GL Tech Solutions</span>
+              </h1>
+
+              <p className="text-slate-600 text-base sm:text-lg max-w-2xl font-light leading-relaxed">
+                Your trusted partner for IT system integration since 2005.
+              </p>
 
             </motion.div>
 
             {/* Hero Image / Visual Box */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, delay: 0.2 }}
               className="lg:col-span-5 relative"
             >
-              <div className="relative rounded-2xl overflow-hidden border border-slate-700/50 shadow-2xl group">
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60 z-10"></div>
-                <img 
-                  src={teamCollaboration} 
-                  alt="GLOBX Corporate Collaboration" 
-                  className="w-full h-[400px] object-cover object-center group-hover:scale-105 transition-transform duration-700" 
+              <div className="relative rounded-2xl overflow-hidden border border-slate-200/90 shadow-2xl shadow-slate-300/40 bg-white group">
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-40 z-10"></div>
+                <img
+                  src={teamCollaboration}
+                  alt="GLTech Solutions Company Building"
+                  className="w-full h-[400px] object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 />
-                
-                {/* Floating Telemetry Box */}
               </div>
             </motion.div>
 
@@ -140,68 +130,42 @@ export default function AboutUs() {
       {/* 2. HISTORY & HERITAGE TIMELINE */}
       <section className="py-20 sm:py-28 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-            
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 xl:gap-14 items-center">
+
             {/* Timeline Text */}
-            <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
+            <div className="lg:col-span-6 space-y-6">
               <span className="text-xs uppercase font-extrabold tracking-wider text-brand-primary">Our Evolution</span>
               <h2 className="text-3xl sm:text-4xl font-bold font-display text-brand-dark tracking-tight leading-tight">
                 Our Journey from Local Integration to <span className="text-brand-primary">Enterprise Orchestration</span>
               </h2>
-              
               <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-light">
-                GLOBX System & Network Pvt. Ltd. represents the culmination of over a decade of hands-on engineering, constant training, and customer dedication.
+                Founded in 2005, GL Tech Solutions began as a small IT consulting firm with a big vision: to help businesses leverage technology to achieve their goals. Over the years, we've grown into a comprehensive system integration company serving clients across multiple industries.
               </p>
-              
-              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100 flex items-start gap-4">
-                <Award className="w-8 h-8 text-brand-primary shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="font-semibold text-brand-dark text-sm sm:text-base">Certified Engineers & Partners</h4>
-                  <p className="text-xs sm:text-sm text-slate-600 mt-1">
-                    Our technical team holds certifications across Cisco, Fortinet, Microsoft, VMware, RedHat, Veeam, and Ruckus, ensuring that every deployment is audit-ready and secure.
-                  </p>
+              <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-light">
+                Our journey has been marked by a commitment to technical excellence and customer satisfaction. We've evolved with the changing technology landscape, consistently staying ahead of industry trends to provide our clients with the most effective solutions.
+              </p>
+              <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-light">
+                Today, GL Tech Solutions is recognized as a leader in system integration, offering comprehensive services that include desktop integration, server and storage solutions, networking equipment, security systems, and CCTV implementation.
+              </p>
+            </div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="lg:col-span-6 relative"
+              viewport={{ once: true, amount: 0.15 }}
+             
+            >
+              <div className="relative rounded-2xl overflow-hidden border border-slate-200/90 shadow-2xl shadow-slate-300/40 bg-white group">
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-40 z-10"></div>
+                <img src={teamCollaborationTeam} alt="GL Tech Solutions Corporate Team" className="w-full h-[400px] object-cover object-center group-hover:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/75 to-transparent p-6 pt-20">
+                  <span className="text-xs font-bold uppercase tracking-wider text-cyan-200">GL Tech Solutions</span>
+                  <p className="mt-1 text-sm text-white">Building practical technology partnerships since 2005.</p>
                 </div>
               </div>
-
-              {/* Inline Tech Badges */}
-              <div className="pt-2">
-                <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider block mb-3">OEM Certifications Include:</span>
-                <div className="flex flex-wrap gap-2">
-                  {certs.slice(0, 4).map((c, i) => (
-                    <span key={i} className="text-xs bg-slate-100 text-slate-700 px-3 py-1 rounded-full font-medium border border-slate-200">{c.split(" ")[0]} Certified</span>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Timeline Visual Elements */}
-            <div className="lg:col-span-7 space-y-12 relative pl-6 border-l-2 border-slate-100">
-              {milestones.map((milestone, idx) => (
-                <motion.div 
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, amount: 0.15 }}
-                  transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  key={idx} 
-                  className="relative group"
-                >
-                  <motion.div 
-                    whileHover={{ y: -4, x: 2, backgroundColor: 'rgb(248, 250, 252)', borderColor: 'rgba(191, 219, 254, 1)', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)' }}
-                    transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-                    className="relative bg-slate-50/50 border border-slate-100 rounded-2xl p-6 cursor-default"
-                  >
-                    {/* Bullet */}
-                    <div className="absolute -left-[33px] top-[30px] w-4 h-4 rounded-full bg-white border-4 border-brand-primary group-hover:scale-125 transition-transform duration-300"></div>
-
-                    <span className="text-xs font-bold text-brand-primary bg-blue-50 px-2.5 py-1 rounded-md">{milestone.year}</span>
-                    <h3 className="text-lg font-bold text-brand-dark font-display mt-3 group-hover:text-blue-600 transition-colors duration-300">{milestone.title}</h3>
-                    <p className="text-xs sm:text-sm text-slate-500 leading-relaxed font-light mt-2">{milestone.desc}</p>
-                  </motion.div>
-                </motion.div>
-              ))}
-            </div>
-
+            </motion.div>
           </div>
 
         </div>
@@ -210,9 +174,9 @@ export default function AboutUs() {
       {/* 3. CORE VALUES SECTION */}
       <section className="py-20 sm:py-28 bg-[#f8fafc] border-t border-b border-slate-100 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-            <span className="text-xs uppercase font-extrabold tracking-wider text-brand-primary">The GLOBX Way</span>
+            <span className="text-xs uppercase font-extrabold tracking-wider text-sky-600">The GL Tech Way</span>
             <h2 className="text-3xl font-bold font-display text-brand-dark tracking-tight">Core Values Driving Our Projects</h2>
             <p className="text-slate-500 font-light text-sm sm:text-base leading-relaxed">
               Every system we provision, cable we terminate, and application we code is bound by our fundamental operating principles.
@@ -221,13 +185,13 @@ export default function AboutUs() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {values.map((value, idx) => (
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 whileHover={{ y: -6, borderColor: 'rgba(147, 197, 253, 0.8)', boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)' }}
                 transition={{ type: 'spring', stiffness: 300, damping: 20, delay: idx * 0.1 }}
-                key={idx} 
+                key={idx}
                 className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm space-y-4 group cursor-default"
               >
                 <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -246,9 +210,9 @@ export default function AboutUs() {
       <section className="py-20 sm:py-28 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* Image Left */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.15 }}
@@ -256,10 +220,10 @@ export default function AboutUs() {
               className="lg:col-span-5 relative"
             >
               <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-2xl">
-                <img 
-                  src={serverRacks} 
-                  alt="Enterprise Datacenter Server Racks" 
-                  className="w-full h-[500px] object-cover object-center" 
+                <img
+                  src={serverRacks}
+                  alt="Enterprise Datacenter Server Racks"
+                  className="w-full h-[500px] object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6 text-white space-y-1">
@@ -272,15 +236,15 @@ export default function AboutUs() {
 
             {/* Mission & Vision Right */}
             <div className="lg:col-span-7 space-y-8">
-              
+
               <div className="space-y-4">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-50 text-brand-primary text-xs font-bold uppercase tracking-wider">
                   <Target className="w-4 h-4" />
                   <span>Our Mission</span>
                 </div>
-                <h3 className="text-2xl font-bold font-display text-brand-dark tracking-tight">Standardizing Operations Through Secure Connectivity</h3>
+                <h3 className="text-2xl font-bold font-display text-brand-dark tracking-tight">Empowering Businesses Through Better Technology</h3>
                 <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-light">
-                  Our mission is to enable government corporations and commercial businesses to establish secure, redundant, and high-performance communication systems. By deploying robust hardware configurations and custom workflow software, we bridge the gap between legacy operations and state-of-the-art automation.
+                  To deliver high-quality, innovative IT system integration solutions that empower businesses to succeed in an increasingly digital world. We strive to be a trusted partner who understands our clients' unique needs and helps them achieve their technological objectives efficiently and effectively.
                 </p>
               </div>
 
@@ -289,9 +253,9 @@ export default function AboutUs() {
                   <Compass className="w-4 h-4" />
                   <span>Our Vision</span>
                 </div>
-                <h3 className="text-2xl font-bold font-display text-brand-dark tracking-tight">The Leading Systems Integrator in Eastern India</h3>
+                <h3 className="text-2xl font-bold font-display text-brand-dark tracking-tight">Setting the Standard for System Integration</h3>
                 <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-light">
-                  We envision becoming the premier and most trusted enterprise systems engineering and software architecture partner in Eastern India. We plan to achieve this by constantly training our team on newer security protocols, cloud topologies, and AI tools while upholding our strict SLA response times and engineering integrity.
+                  To be the leading system integration company that sets the standard for excellence in the industry. We aim to continuously innovate and adapt to evolving technologies, helping our clients stay competitive and secure in a rapidly changing digital landscape.
                 </p>
               </div>
 
@@ -301,81 +265,83 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* 5. ENTERPRISE CAPABILITIES (WITH BG CORPORATE IMAGE) */}
-      <section className="relative py-24 sm:py-32 bg-slate-900 text-white overflow-hidden rounded-t-3xl">
-        {/* Background Image with Dark Overlay */}
+      {/* 5. ENTERPRISE CAPABILITIES — OCEANIC SKY BLUE ENTERPRISE GRADIENT */}
+      <section className="relative py-24 sm:py-32 bg-gradient-to-r from-[#0369A1] via-[#0284C7] to-[#0EA5E9] text-white overflow-hidden rounded-t-3xl">
+        {/* Background Image with Overlay */}
         <div className="absolute rounded-t-3xl inset-0 z-0">
-          <img 
-            src={fiberNetwork} 
-            alt="Optical Fiber Network Backbone" 
-            className="w-full h-full object-cover object-center opacity-25" 
+          <img
+            src={fiberNetwork}
+            alt="Optical Fiber Network Backbone"
+            className="w-full h-full object-cover object-center opacity-15"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900/95 to-slate-950"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0369A1]/80 via-[#0284C7]/80 to-[#0EA5E9]/80"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* Text and Capabilities */}
             <div className="lg:col-span-8 space-y-6">
-              <span className="text-xs uppercase font-extrabold tracking-wider text-blue-400">Software & System Systems Integration</span>
+              <span className="text-xs uppercase font-extrabold tracking-wider text-sky-200">GL Tech Services</span>
               <h2 className="text-3xl sm:text-5xl font-extrabold font-display tracking-tight text-white leading-tight py-2">
-                Expanding Capabilities in Software Systems & AI Integration
+                Comprehensive System Integration Solutions
               </h2>
-              
-              <p className="text-slate-300 font-light text-sm sm:text-base max-w-2xl leading-relaxed">
-                In addition to hardware, routing, and optical systems, we design customized enterprise dashboards, automated database synchronization pipelines, and machine learning solutions to resolve real-world operations issues.
+
+              <p className="text-sky-100 font-light text-sm sm:text-base max-w-2xl leading-relaxed">
+                 At GL Tech Solutions, we bring together hardware, software, networking,
+                 security, and surveillance technologies into unified solutions designed
+                 around your business needs.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
                 {[
-                  "Real-time Telemetry Dashboard Integration",
-                  "Automated SLA Alert & Escalation Engines",
-                  "Secure Multi-tenant Database Synchronization",
-                  "AI-Assisted Threat Prevention & Log Auditing",
-                  "Unified Ticket Workflows & Team Despatched Analytics",
-                  "End-to-End API Integration & Legacy Modernization"
+                  "Desktop Workstation Deployment & Integration",
+                  "Server, Storage & Virtualization Solutions",
+                  "LAN/WAN & Wireless Network Implementation",
+                  "Firewall, Endpoint Security & Network Protection",
+                  "CCTV Surveillance & Access Control Integration",
+                  "Backup, Disaster Recovery & Infrastructure Support"
                 ].map((cap, i) => (
                   <div key={i} className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-blue-400 shrink-0" />
-                    <span className="text-sm text-slate-200 font-light">{cap}</span>
+                    <CheckCircle className="w-5 h-5 text-sky-200 shrink-0" />
+                    <span className="text-sm text-white font-light">{cap}</span>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Quick Contact / Stats Card */}
-            <motion.div 
-              whileHover={{ y: -4, borderColor: 'rgba(255, 255, 255, 0.25)', backgroundColor: 'rgba(255, 255, 255, 0.12)' }}
+            <motion.div
+              whileHover={{ y: -4, borderColor: 'rgba(255, 255, 255, 0.4)', backgroundColor: 'rgba(255, 255, 255, 0.2)' }}
               transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-              className="lg:col-span-4 bg-white/10 backdrop-blur-md border border-white/10 p-8 rounded-3xl space-y-6 cursor-default"
+              className="lg:col-span-4 bg-white/15 backdrop-blur-md border border-white/25 p-8 rounded-3xl space-y-6 cursor-default shadow-xl"
             >
-              <h3 className="text-xl font-bold font-display text-white border-b border-white/10 pb-4">GLOBX Office Details</h3>
-              
+              <h3 className="text-xl font-bold font-display text-white border-b border-white/20 pb-4">GL Tech Solution Office Details</h3>
+
               <div className="space-y-4 text-sm font-light">
                 <div className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-blue-400 shrink-0 mt-1" />
+                  <MapPin className="w-5 h-5 text-white shrink-0 mt-1" />
                   <div>
-                    <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">Headquarters</span>
-                    <span className="text-slate-200 text-xs sm:text-sm leading-normal block">
-                      GLOBX System & Network Pvt. Ltd., Room No-208 & 209, 2nd Floor, Odyssa Business Centre, Rasulgarh, Bhubaneswar-751010
+                    <span className="text-[10px] text-sky-200 font-bold uppercase tracking-wider block">Headquarters</span>
+                    <span className="text-white text-xs sm:text-sm leading-normal block">
+                      Plot No- HIG/141, Kanan Vihar, Phase-1, Chadrashekharpur, Bhubaneswar - 751024
                     </span>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-3">
-                  <Calendar className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
-                  <div>
-                    <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">Incorporation</span>
-                    <span className="text-slate-200">August 2021 (Reg: Pvt. Ltd.)</span>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Briefcase className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
+                  <Calendar className="w-5 h-5 text-white shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">Key Client Sectors</span>
-                    <span className="text-slate-200">PSUs, Higher Education, Research Institutes, Corporate Offices</span>
+                    <span className="text-[10px] text-sky-200 font-bold uppercase tracking-wider block">Incorporation</span>
+                    <span className="text-white">Founded in 2005</span>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <Briefcase className="w-5 h-5 text-white shrink-0 mt-0.5" />
+                  <div>
+                    <span className="text-[10px] text-sky-200 font-bold uppercase tracking-wider block">Key Client Sectors</span>
+                    <span className="text-white">PSUs, Higher Education, Research Institutes, Corporate Offices</span>
                   </div>
                 </div>
               </div>

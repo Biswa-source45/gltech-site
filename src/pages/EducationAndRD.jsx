@@ -43,28 +43,31 @@ export default function EducationAndRD() {
     <div className="w-full bg-slate-50 font-sans">
       
       {/* 1. Header Banner */}
-      <section className="bg-gradient-to-r from-[#091E42] to-[#0a2754] text-white py-20 relative overflow-hidden">
-        <div className="absolute inset-0 z-0 pointer-events-none opacity-45">
+      <section className="bg-gradient-to-b from-white via-[#F8FAFC] to-[#F1F5F9] text-[#0F172A] py-20 relative overflow-hidden border-b border-slate-200/70">
+        <div className="absolute inset-0 opacity-[0.035] pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(15,23,42,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(15,23,42,0.8) 1px, transparent 1px)', backgroundSize: '56px 56px' }} />
+        <div className="absolute top-0 right-0 w-[550px] h-[450px] pointer-events-none z-0" style={{ background: 'radial-gradient(ellipse at top right, rgba(14,165,233,0.12) 0%, rgba(56,189,248,0.06) 40%, transparent 70%)' }} />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[400px] pointer-events-none z-0" style={{ background: 'radial-gradient(ellipse at bottom left, rgba(6,182,212,0.1) 0%, rgba(14,165,233,0.05) 45%, transparent 70%)' }} />
+        <div className="absolute inset-0 z-0 pointer-events-none opacity-30">
           <FloatingLines 
             enabledWaves={['top', 'middle', 'bottom']}
-            lineCount={[12, 18, 24]}
-            lineDistance={[7, 5, 3]}
+            lineCount={[8, 12, 16]}
+            lineDistance={[8, 6, 4]}
             bendRadius={6.0}
             bendStrength={-0.6}
             interactive={true}
             parallax={true}
-            linesGradient={['#4073b3', '#0f1c57', '#f54575']}
+            linesGradient={['#0EA5E9', '#38BDF8', '#0284C7', '#06B6D4']}
           />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-4">
-          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-400/20 text-xs font-semibold text-blue-300 uppercase tracking-wider">
-            <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 border border-sky-200 text-xs font-semibold text-sky-700 uppercase tracking-wider">
+            <span className="w-2 h-2 rounded-full bg-sky-500 animate-pulse" />
             Industry Verticals
           </span>
-          <h1 className="text-4.5xl sm:text-5xl font-extrabold font-display tracking-tight text-white leading-tight">
+          <h1 className="text-4.5xl sm:text-5xl font-extrabold font-display tracking-tight text-[#0F172A] leading-tight">
             Education & R&D Institutes
           </h1>
-          <p className="text-slate-300 text-base sm:text-lg max-w-3xl font-light leading-relaxed">
+          <p className="text-slate-600 text-base sm:text-lg max-w-3xl font-light leading-relaxed">
             Delivering high-availability academic portals, interactive classrooms, and high-performance computing clusters for leading research facilities.
           </p>
         </div>

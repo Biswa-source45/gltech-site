@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react';
-import logo from '../assets/img.png';
+import { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLenis } from 'lenis/react';
@@ -22,39 +21,40 @@ export default function Navbar({ onNavigate, currentPage }) {
   };
 
   const services = [
-    { name: 'Software Development', id: 'it-applications' },
-    { name: 'IT Infrastructure Led Services', id: 'it-infrastructure' },
-    { name: 'Business Process Management', id: 'business-process' },
-    { name: 'Digital Enterprise Applications', id: 'digital-enterprise' }
-  ];
-
-  const solutions = [
+    { name: 'Desktop Integration', id: 'desktop-integration' },
+    { name: 'Server & Storage Solutions', id: 'server-storage-solutions' },
     { name: 'Networking Solutions', id: 'networking-solutions' },
-    { name: 'Security Solutions', id: 'security-solutions' },
-    { name: 'Wireless Network Solutions', id: 'wireless-solutions' },
-    { name: 'Mobility Solutions', id: 'mobility-solutions' },
-    { name: 'Surveillance Security Solutions', id: 'surveillance-solutions' },
-    { name: 'Building Management System', id: 'bms-solutions' },
-    { name: 'Public Announcement System', id: 'pa-solutions' },
-    { name: 'Server and Storage Solutions', id: 'server-storage-solutions' },
-    { name: 'Cloud Infrastructure Solutions', id: 'cloud-solutions' }
+    { name: 'Security Equipment', id: 'security-equipment' },
+    { name: 'CCTV Solutions', id: 'cctv-solutions' }
   ];
 
-  const industries = [
-    { name: 'Education and R&D Institutions', id: 'education-rd' },
-    { name: 'Government Enterprises', id: 'government' },
-    { name: 'Public Sector Units', id: 'public-sector' },
-    { name: 'Corporates', id: 'corporates' }
-  ];
+  // const solutions = [
+  //   { name: 'Networking Solutions', id: 'networking-solutions' },
+  //   { name: 'Security Solutions', id: 'security-solutions' },
+  //   { name: 'Wireless Network Solutions', id: 'wireless-solutions' },
+  //   { name: 'Mobility Solutions', id: 'mobility-solutions' },
+  //   { name: 'Surveillance Security Solutions', id: 'surveillance-solutions' },
+  //   { name: 'Building Management System', id: 'bms-solutions' },
+  //   { name: 'Public Announcement System', id: 'pa-solutions' },
+  //   { name: 'Server and Storage Solutions', id: 'server-storage-solutions' },
+  //   { name: 'Cloud Infrastructure Solutions', id: 'cloud-solutions' }
+  // ];
 
-  const products = [
-    { name: 'OneDesk', id: 'onedesk' }
-  ];
+  // const industries = [
+  //   { name: 'Education and R&D Institutions', id: 'education-rd' },
+  //   { name: 'Government Enterprises', id: 'government' },
+  //   { name: 'Public Sector Units', id: 'public-sector' },
+  //   { name: 'Corporates', id: 'corporates' }
+  // ];
 
-  const isServicesActive = ['it-infrastructure', 'it-applications', 'business-process', 'digital-enterprise', 'service-detail'].includes(currentPage);
-  const isSolutionsActive = ['networking-solutions', 'security-solutions', 'wireless-solutions', 'mobility-solutions', 'surveillance-solutions', 'bms-solutions', 'pa-solutions', 'server-storage-solutions', 'cloud-solutions', 'solution-detail'].includes(currentPage);
-  const isIndustriesActive = ['education-rd', 'government', 'public-sector', 'corporates', 'industry-detail'].includes(currentPage);
-  const isProductsActive = ['onedesk'].includes(currentPage);
+  // const products = [
+  //   { name: 'OneDesk', id: 'onedesk' }
+  // ];
+
+  const isServicesActive = currentPage === 'services' || currentPage === 'service-detail';
+  // const isSolutionsActive = ['networking-solutions', 'security-solutions', 'wireless-solutions', 'mobility-solutions', 'surveillance-solutions', 'bms-solutions', 'pa-solutions', 'server-storage-solutions', 'cloud-solutions', 'solution-detail'].includes(currentPage);
+  // const isIndustriesActive = ['education-rd', 'government', 'public-sector', 'corporates', 'industry-detail'].includes(currentPage);
+  // const isProductsActive = ['onedesk'].includes(currentPage);
 
   const toggleDropdown = (dropdown) => {
     if (activeDropdown === dropdown) {
@@ -99,10 +99,10 @@ export default function Navbar({ onNavigate, currentPage }) {
   };
 
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-md border-b border-slate-100 py-3' : 'bg-white border-b border-slate-100 py-4'}`}>
+    <header className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-[#111827]/95 backdrop-blur-md shadow-md border-b border-[#1E293B] py-3' : 'bg-[#111827] border-b border-[#1E293B] py-4'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Logo */}
+          {/* Brand */}
           <motion.div
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.96 }}
@@ -110,7 +110,9 @@ export default function Navbar({ onNavigate, currentPage }) {
             className="flex items-center cursor-pointer"
             onClick={() => handleLinkClick('home')}
           >
-            <img src={logo} alt="GLOBX Logo" className="h-12 sm:h-13 w-auto object-contain transition-all duration-300" />
+            <span className="text-xl sm:text-2xl font-display font-bold tracking-tight text-[#F8FAFC] transition-colors duration-300">
+              GLTech Solutions
+            </span>
           </motion.div>
 
           {/* Desktop Navigation — pure CSS hover for zero-latency interactions */}
@@ -118,7 +120,7 @@ export default function Navbar({ onNavigate, currentPage }) {
             {/* Home */}
             <button
               onClick={() => handleLinkClick('home')}
-              className={`px-3 py-2 text-sm font-medium rounded-md cursor-pointer active:scale-[0.97] nav-link ${currentPage === 'home' ? 'text-brand-primary bg-blue-50' : 'text-slate-700 hover:text-brand-primary hover:bg-slate-50'}`}
+              className={`px-3 py-2 text-sm font-medium rounded-md cursor-pointer active:scale-[0.97] nav-link ${currentPage === 'home' ? 'text-[#F8FAFC] bg-[#1E293B]' : 'text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-[#1E293B]'}`}
             >
               Home
             </button>
@@ -126,22 +128,23 @@ export default function Navbar({ onNavigate, currentPage }) {
             {/* About */}
             <button
               onClick={() => handleLinkClick('about')}
-              className={`px-3 py-2 text-sm font-medium rounded-md cursor-pointer active:scale-[0.97] nav-link ${currentPage === 'about' ? 'text-brand-primary bg-blue-50' : 'text-slate-700 hover:text-brand-primary hover:bg-slate-50'}`}
+              className={`px-3 py-2 text-sm font-medium rounded-md cursor-pointer active:scale-[0.97] nav-link ${currentPage === 'about' ? 'text-[#F8FAFC] bg-[#1E293B]' : 'text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-[#1E293B]'}`}
             >
               About Us
             </button>
 
             {/* Services Dropdown */}
             <div className="relative group">
-              <button className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-md cursor-pointer nav-link active:scale-[0.97] ${isServicesActive ? 'text-brand-primary bg-blue-50' : 'text-slate-700 hover:text-brand-primary hover:bg-slate-50'}`}>
-                Services <ChevronDown className={`w-4 h-4 transition-colors duration-150 ${isServicesActive ? 'text-brand-primary' : 'text-slate-400 group-hover:text-brand-primary'}`} />
+              <button className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-md cursor-pointer nav-link active:scale-[0.97] ${isServicesActive ? 'text-[#F8FAFC] bg-[#1E293B]' : 'text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-[#1E293B]'}`}>
+                Services <ChevronDown className={`w-4 h-4 transition-colors duration-150 ${isServicesActive ? 'text-[#38BDF8]' : 'text-[#64748B] group-hover:text-[#38BDF8]'}`} />
               </button>
-              <div className="absolute left-0 top-full mt-1.5 w-64 rounded-xl bg-white border border-slate-100 shadow-xl opacity-0 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-150 ease-out z-50 p-2 before:content-[''] before:absolute before:-top-4 before:left-0 before:right-0 before:h-4">
+              <div className="absolute left-0 top-full mt-1.5 w-64 rounded-xl bg-[#111B2E] border border-[#1E293B] shadow-xl opacity-0 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-150 ease-out z-50 p-2 before:content-[''] before:absolute before:-top-4 before:left-0 before:right-0 before:h-4">
                 {services.map((item) => (
                   <button
                     key={item.id}
-                    onClick={() => handleLinkClick(item.id === 'it-infrastructure' ? 'it-infrastructure' : 'service-detail', item.id)}
-                    className="w-full text-left px-3 py-2 text-sm rounded-lg text-slate-700 hover:text-brand-primary hover:bg-blue-50/70 transition-all duration-100 font-medium cursor-pointer"
+                    onClick={() => handleLinkClick('service-detail', item.id)}
+                                        onClick={() => handleLinkClick('service-detail', item.id)}
+                    className="w-full text-left px-3 py-2 text-sm rounded-lg text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-[#1E293B] transition-all duration-100 font-medium cursor-pointer"
                   >
                     {item.name}
                   </button>
@@ -150,71 +153,71 @@ export default function Navbar({ onNavigate, currentPage }) {
             </div>
 
             {/* Solutions Dropdown */}
-            <div className="relative group">
-              <button className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-md cursor-pointer nav-link active:scale-[0.97] ${isSolutionsActive ? 'text-brand-primary bg-blue-50' : 'text-slate-700 hover:text-brand-primary hover:bg-slate-50'}`}>
-                Solutions <ChevronDown className={`w-4 h-4 transition-colors duration-150 ${isSolutionsActive ? 'text-brand-primary' : 'text-slate-400 group-hover:text-brand-primary'}`} />
+            {/* <div className="relative group">
+              <button className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-md cursor-pointer nav-link active:scale-[0.97] ${isSolutionsActive ? 'text-[#F8FAFC] bg-[#1E293B]' : 'text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-[#1E293B]'}`}>
+                Solutions <ChevronDown className={`w-4 h-4 transition-colors duration-150 ${isSolutionsActive ? 'text-[#3B82F6]' : 'text-[#64748B] group-hover:text-[#3B82F6]'}`} />
               </button>
-              <div className="absolute left-1/2 -translate-x-1/2 top-full mt-1.5 w-80 rounded-xl bg-white border border-slate-100 shadow-xl opacity-0 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-150 ease-out z-50 p-2 grid grid-cols-1 gap-0.5 before:content-[''] before:absolute before:-top-4 before:left-0 before:right-0 before:h-4">
+              <div className="absolute left-1/2 -translate-x-1/2 top-full mt-1.5 w-80 rounded-xl bg-[#111B2E] border border-[#1E293B] shadow-xl opacity-0 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-150 ease-out z-50 p-2 grid grid-cols-1 gap-0.5 before:content-[''] before:absolute before:-top-4 before:left-0 before:right-0 before:h-4">
                 {solutions.map((item) => (
                   <button
                     key={item.id}
                     onClick={() => handleLinkClick(item.id === 'networking-solutions' ? 'networking-solutions' : 'solution-detail', item.id)}
-                    className="w-full text-left px-3 py-2 text-xs rounded-lg text-slate-700 hover:text-brand-primary hover:bg-blue-50/70 transition-all duration-100 font-medium cursor-pointer"
+                    className="w-full text-left px-3 py-2 text-xs rounded-lg text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-[#1E293B] transition-all duration-100 font-medium cursor-pointer"
                   >
                     {item.name}
                   </button>
                 ))}
               </div>
-            </div>
+            </div> */}
 
             {/* Industries Dropdown */}
-            <div className="relative group">
-              <button className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-md cursor-pointer nav-link active:scale-[0.97] ${isIndustriesActive ? 'text-brand-primary bg-blue-50' : 'text-slate-700 hover:text-brand-primary hover:bg-slate-50'}`}>
-                Industries <ChevronDown className={`w-4 h-4 transition-colors duration-150 ${isIndustriesActive ? 'text-brand-primary' : 'text-slate-400 group-hover:text-brand-primary'}`} />
+            {/* <div className="relative group">
+              <button className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-md cursor-pointer nav-link active:scale-[0.97] ${isIndustriesActive ? 'text-[#F8FAFC] bg-[#1E293B]' : 'text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-[#1E293B]'}`}>
+                Industries <ChevronDown className={`w-4 h-4 transition-colors duration-150 ${isIndustriesActive ? 'text-[#3B82F6]' : 'text-[#64748B] group-hover:text-[#3B82F6]'}`} />
               </button>
-              <div className="absolute right-0 top-full mt-1.5 w-64 rounded-xl bg-white border border-slate-100 shadow-xl opacity-0 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-150 ease-out z-50 p-2 before:content-[''] before:absolute before:-top-4 before:left-0 before:right-0 before:h-4">
+              <div className="absolute right-0 top-full mt-1.5 w-64 rounded-xl bg-[#111B2E] border border-[#1E293B] shadow-xl opacity-0 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-150 ease-out z-50 p-2 before:content-[''] before:absolute before:-top-4 before:left-0 before:right-0 before:h-4">
                 {industries.map((item) => (
                   <button
                     key={item.id}
                     onClick={() => handleLinkClick(item.id === 'education-rd' ? 'education-rd' : 'industry-detail', item.id === 'education-rd' ? null : item.id)}
-                    className="w-full text-left px-3 py-2 text-sm rounded-lg text-slate-700 hover:text-brand-primary hover:bg-blue-50/70 transition-all duration-100 font-medium cursor-pointer"
+                    className="w-full text-left px-3 py-2 text-sm rounded-lg text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-[#1E293B] transition-all duration-100 font-medium cursor-pointer"
                   >
                     {item.name}
                   </button>
                 ))}
               </div>
-            </div>
+            </div> */}
 
             {/* Products Dropdown */}
-            <div className="relative group">
-              <button className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-md cursor-pointer nav-link active:scale-[0.97] ${isProductsActive ? 'text-brand-primary bg-blue-50' : 'text-slate-700 hover:text-brand-primary hover:bg-slate-50'}`}>
-                Products <ChevronDown className={`w-4 h-4 transition-colors duration-150 ${isProductsActive ? 'text-brand-primary' : 'text-slate-400 group-hover:text-brand-primary'}`} />
+            {/* <div className="relative group">
+              <button className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-md cursor-pointer nav-link active:scale-[0.97] ${isProductsActive ? 'text-[#F8FAFC] bg-[#1E293B]' : 'text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-[#1E293B]'}`}>
+                Products <ChevronDown className={`w-4 h-4 transition-colors duration-150 ${isProductsActive ? 'text-[#3B82F6]' : 'text-[#64748B] group-hover:text-[#3B82F6]'}`} />
               </button>
-              <div className="absolute right-0 top-full mt-1.5 w-36 rounded-xl bg-white border border-slate-100 shadow-xl opacity-0 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-150 ease-out z-50 p-2 before:content-[''] before:absolute before:-top-4 before:left-0 before:right-0 before:h-4">
+              <div className="absolute right-0 top-full mt-1.5 w-36 rounded-xl bg-[#111B2E] border border-[#1E293B] shadow-xl opacity-0 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-150 ease-out z-50 p-2 before:content-[''] before:absolute before:-top-4 before:left-0 before:right-0 before:h-4">
                 {products.map((item) => (
                   <button
                     key={item.id}
                     onClick={() => handleLinkClick(item.id)}
-                    className="w-full text-left px-3 py-2 text-sm rounded-lg text-slate-700 hover:text-brand-primary hover:bg-blue-50/70 transition-all duration-100 font-medium cursor-pointer"
+                    className="w-full text-left px-3 py-2 text-sm rounded-lg text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-[#1E293B] transition-all duration-100 font-medium cursor-pointer"
                   >
                     {item.name}
                   </button>
                 ))}
               </div>
-            </div>
+            </div> */}
 
             {/* Careers */}
-            <button
+            {/* <button
               onClick={() => handleLinkClick('careers')}
-              className={`px-3 py-2 text-sm font-medium rounded-md cursor-pointer active:scale-[0.97] nav-link ${currentPage === 'careers' ? 'text-brand-primary bg-blue-50' : 'text-slate-700 hover:text-brand-primary hover:bg-slate-50'}`}
+              className={`px-3 py-2 text-sm font-medium rounded-md cursor-pointer active:scale-[0.97] nav-link ${currentPage === 'careers' ? 'text-[#F8FAFC] bg-[#1E293B]' : 'text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-[#1E293B]'}`}
             >
               Careers
-            </button>
+            </button> */}
 
             {/* Contact */}
             <button
               onClick={() => handleLinkClick('contact')}
-              className={`px-3 py-2 text-sm font-medium rounded-md cursor-pointer active:scale-[0.97] nav-link ${currentPage === 'contact' ? 'text-brand-primary bg-blue-50' : 'text-slate-700 hover:text-brand-primary hover:bg-slate-50'}`}
+              className={`px-3 py-2 text-sm font-medium rounded-md cursor-pointer active:scale-[0.97] nav-link ${currentPage === 'contact' ? 'text-[#F8FAFC] bg-[#1E293B]' : 'text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-[#1E293B]'}`}
             >
               Contact
             </button>
@@ -244,14 +247,14 @@ export default function Navbar({ onNavigate, currentPage }) {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="lg:hidden overflow-hidden bg-white border-b border-slate-100 shadow-inner"
+            className="lg:hidden overflow-hidden bg-[#111827] border-b border-[#1E293B] shadow-inner"
           >
-            <div className="px-4 pt-2 pb-6 space-y-1 bg-white">
+            <div className="px-4 pt-2 pb-6 space-y-1 bg-[#111827]">
               <motion.button
                 variants={mobileItemVariants}
                 whileTap={{ scale: 0.97 }}
                 onClick={() => handleLinkClick('home')}
-                className="block w-full text-left px-4 py-2.5 rounded-lg text-base font-semibold text-slate-800 hover:bg-slate-50 hover:text-brand-primary cursor-pointer"
+                className="block w-full text-left px-4 py-2.5 rounded-lg text-base font-semibold text-[#F8FAFC] hover:bg-[#1E293B] hover:text-[#3B82F6] cursor-pointer"
               >
                 Home
               </motion.button>
@@ -260,7 +263,7 @@ export default function Navbar({ onNavigate, currentPage }) {
                 variants={mobileItemVariants}
                 whileTap={{ scale: 0.97 }}
                 onClick={() => handleLinkClick('about')}
-                className="block w-full text-left px-4 py-2.5 rounded-lg text-base font-semibold text-slate-800 hover:bg-slate-50 hover:text-brand-primary cursor-pointer"
+                className="block w-full text-left px-4 py-2.5 rounded-lg text-base font-semibold text-[#F8FAFC] hover:bg-[#1E293B] hover:text-[#3B82F6] cursor-pointer"
               >
                 About Us
               </motion.button>
@@ -269,7 +272,7 @@ export default function Navbar({ onNavigate, currentPage }) {
               <motion.div variants={mobileItemVariants} className="space-y-1">
                 <button
                   onClick={() => toggleDropdown('services')}
-                  className="flex justify-between items-center w-full px-4 py-2.5 rounded-lg text-base font-semibold text-slate-800 hover:bg-slate-50 hover:text-brand-primary cursor-pointer"
+                  className="flex justify-between items-center w-full px-4 py-2.5 rounded-lg text-base font-semibold text-[#F8FAFC] hover:bg-[#1E293B] hover:text-[#3B82F6] cursor-pointer"
                 >
                   <span>Services</span>
                   <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />
@@ -281,14 +284,15 @@ export default function Navbar({ onNavigate, currentPage }) {
                       animate={{ height: 'auto', opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.22, ease: 'easeInOut' }}
-                      className="pl-6 space-y-1 bg-slate-50/50 rounded-lg py-1 overflow-hidden"
+                      className="pl-6 space-y-1 bg-[#111B2E] rounded-lg py-1 overflow-hidden"
                     >
                       {services.map((item) => (
                         <motion.button
                           whileTap={{ scale: 0.98 }}
                           key={item.id}
-                          onClick={() => handleLinkClick(item.id === 'it-infrastructure' ? 'it-infrastructure' : 'service-detail', item.id)}
-                          className="block w-full text-left px-4 py-2 text-sm text-slate-600 hover:text-brand-primary font-medium cursor-pointer"
+                          onClick={() => handleLinkClick('service-detail', item.id)}
+                                                    onClick={() => handleLinkClick('service-detail', item.id)}
+                          className="block w-full text-left px-4 py-2 text-sm text-[#94A3B8] hover:text-[#3B82F6] font-medium cursor-pointer"
                         >
                           {item.name}
                         </motion.button>
@@ -299,10 +303,10 @@ export default function Navbar({ onNavigate, currentPage }) {
               </motion.div>
 
               {/* Solutions Mobile */}
-              <motion.div variants={mobileItemVariants} className="space-y-1">
+              {/* <motion.div variants={mobileItemVariants} className="space-y-1">
                 <button
                   onClick={() => toggleDropdown('solutions')}
-                  className="flex justify-between items-center w-full px-4 py-2.5 rounded-lg text-base font-semibold text-slate-800 hover:bg-slate-50 hover:text-brand-primary cursor-pointer"
+                  className="flex justify-between items-center w-full px-4 py-2.5 rounded-lg text-base font-semibold text-[#F8FAFC] hover:bg-[#1E293B] hover:text-[#3B82F6] cursor-pointer"
                 >
                   <span>Solutions</span>
                   <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${activeDropdown === 'solutions' ? 'rotate-180' : ''}`} />
@@ -314,7 +318,7 @@ export default function Navbar({ onNavigate, currentPage }) {
                       animate={{ height: 'auto', opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.22, ease: 'easeInOut' }}
-                      className="pl-6 space-y-1 bg-slate-50/50 rounded-lg py-1 overflow-hidden"
+                      className="pl-6 space-y-1 bg-[#111B2E] rounded-lg py-1 overflow-hidden"
                     >
                       <div className="max-h-60 overflow-y-auto space-y-1 py-1">
                         {solutions.map((item) => (
@@ -322,7 +326,7 @@ export default function Navbar({ onNavigate, currentPage }) {
                             whileTap={{ scale: 0.98 }}
                             key={item.id}
                             onClick={() => handleLinkClick(item.id === 'networking-solutions' ? 'networking-solutions' : 'solution-detail', item.id)}
-                            className="block w-full text-left px-4 py-2 text-sm text-slate-600 hover:text-brand-primary font-medium cursor-pointer"
+                            className="block w-full text-left px-4 py-2 text-sm text-[#94A3B8] hover:text-[#3B82F6] font-medium cursor-pointer"
                           >
                             {item.name}
                           </motion.button>
@@ -331,13 +335,13 @@ export default function Navbar({ onNavigate, currentPage }) {
                     </motion.div>
                   )}
                 </AnimatePresence>
-              </motion.div>
+              </motion.div> */}
 
               {/* Industries Mobile */}
-              <motion.div variants={mobileItemVariants} className="space-y-1">
+              {/* <motion.div variants={mobileItemVariants} className="space-y-1">
                 <button
                   onClick={() => toggleDropdown('industries')}
-                  className="flex justify-between items-center w-full px-4 py-2.5 rounded-lg text-base font-semibold text-slate-800 hover:bg-slate-50 hover:text-brand-primary cursor-pointer"
+                  className="flex justify-between items-center w-full px-4 py-2.5 rounded-lg text-base font-semibold text-[#F8FAFC] hover:bg-[#1E293B] hover:text-[#3B82F6] cursor-pointer"
                 >
                   <span>Industries</span>
                   <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${activeDropdown === 'industries' ? 'rotate-180' : ''}`} />
@@ -349,14 +353,14 @@ export default function Navbar({ onNavigate, currentPage }) {
                       animate={{ height: 'auto', opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.22, ease: 'easeInOut' }}
-                      className="pl-6 space-y-1 bg-slate-50/50 rounded-lg py-1 overflow-hidden"
+                      className="pl-6 space-y-1 bg-[#111B2E] rounded-lg py-1 overflow-hidden"
                     >
                       {industries.map((item) => (
                         <motion.button
                           whileTap={{ scale: 0.98 }}
                           key={item.id}
                           onClick={() => handleLinkClick(item.id === 'education-rd' ? 'education-rd' : 'industry-detail', item.id === 'education-rd' ? null : item.id)}
-                          className="block w-full text-left px-4 py-2 text-sm text-slate-600 hover:text-brand-primary font-medium cursor-pointer"
+                            className="block w-full text-left px-4 py-2 text-sm text-[#94A3B8] hover:text-[#3B82F6] font-medium cursor-pointer"
                         >
                           {item.name}
                         </motion.button>
@@ -364,13 +368,13 @@ export default function Navbar({ onNavigate, currentPage }) {
                     </motion.div>
                   )}
                 </AnimatePresence>
-              </motion.div>
+              </motion.div> */}
 
               {/* Products Mobile */}
-              <motion.div variants={mobileItemVariants} className="space-y-1">
+              {/* <motion.div variants={mobileItemVariants} className="space-y-1">
                 <button
                   onClick={() => toggleDropdown('products')}
-                  className="flex justify-between items-center w-full px-4 py-2.5 rounded-lg text-base font-semibold text-slate-800 hover:bg-slate-50 hover:text-brand-primary cursor-pointer"
+                  className="flex justify-between items-center w-full px-4 py-2.5 rounded-lg text-base font-semibold text-[#F8FAFC] hover:bg-[#1E293B] hover:text-[#3B82F6] cursor-pointer"
                 >
                   <span>Products</span>
                   <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${activeDropdown === 'products' ? 'rotate-180' : ''}`} />
@@ -382,14 +386,14 @@ export default function Navbar({ onNavigate, currentPage }) {
                       animate={{ height: 'auto', opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.22, ease: 'easeInOut' }}
-                      className="pl-6 space-y-1 bg-slate-50/50 rounded-lg py-1 overflow-hidden"
+                      className="pl-6 space-y-1 bg-[#111B2E] rounded-lg py-1 overflow-hidden"
                     >
                       {products.map((item) => (
                         <motion.button
                           whileTap={{ scale: 0.98 }}
                           key={item.id}
                           onClick={() => handleLinkClick(item.id)}
-                          className="block w-full text-left px-4 py-2 text-sm text-slate-600 hover:text-brand-primary font-medium cursor-pointer"
+                            className="block w-full text-left px-4 py-2 text-sm text-[#94A3B8] hover:text-[#3B82F6] font-medium cursor-pointer"
                         >
                           {item.name}
                         </motion.button>
@@ -397,22 +401,22 @@ export default function Navbar({ onNavigate, currentPage }) {
                     </motion.div>
                   )}
                 </AnimatePresence>
-              </motion.div>
+              </motion.div> */}
 
-              <motion.button
+              {/* <motion.button
                 variants={mobileItemVariants}
                 whileTap={{ scale: 0.97 }}
                 onClick={() => handleLinkClick('careers')}
-                className="block w-full text-left px-4 py-2.5 rounded-lg text-base font-semibold text-slate-800 hover:bg-slate-50 hover:text-brand-primary cursor-pointer"
+                className="block w-full text-left px-4 py-2.5 rounded-lg text-base font-semibold text-[#F8FAFC] hover:bg-[#1E293B] hover:text-[#3B82F6] cursor-pointer"
               >
                 Careers
-              </motion.button>
+              </motion.button> */}
 
               <motion.button
                 variants={mobileItemVariants}
                 whileTap={{ scale: 0.97 }}
                 onClick={() => handleLinkClick('contact')}
-                className="block w-full text-left px-4 py-2.5 rounded-lg text-base font-semibold text-slate-800 hover:bg-slate-50 hover:text-brand-primary cursor-pointer"
+                className="block w-full text-left px-4 py-2.5 rounded-lg text-base font-semibold text-[#F8FAFC] hover:bg-[#1E293B] hover:text-[#3B82F6] cursor-pointer"
               >
                 Contact
               </motion.button>

@@ -126,11 +126,27 @@ export default function ITInfrastructure() {
 
   return (
     <div className="w-full bg-[#f8fafc] font-sans">
-      
-      {/* 1. Page Header */}
-      <section className="bg-gradient-to-r from-[#091E42] to-[#0a2754] text-white py-20 relative overflow-hidden">
-        <div className="absolute inset-0 z-0 pointer-events-none opacity-45">
-          <FloatingLines 
+
+      {/* 1. Page Header — LIGHT ENTERPRISE WITH SKY BLUE ACCENTS */}
+      <section className="bg-gradient-to-b from-white via-[#F8FAFC] to-[#F1F5F9] text-[#0F172A] py-20 relative overflow-hidden border-b border-slate-200/70">
+        {/* Architectural Grid Overlay */}
+        <div className="absolute inset-0 opacity-[0.035] pointer-events-none" style={{
+          backgroundImage: 'linear-gradient(rgba(15,23,42,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(15,23,42,0.8) 1px, transparent 1px)',
+          backgroundSize: '56px 56px'
+        }} />
+
+        {/* Ambient Sky / Cyan Glows */}
+        <div
+          className="absolute top-0 right-0 w-[550px] h-[450px] pointer-events-none z-0"
+          style={{ background: 'radial-gradient(ellipse at top right, rgba(14,165,233,0.12) 0%, rgba(56,189,248,0.06) 40%, transparent 70%)' }}
+        />
+        <div
+          className="absolute bottom-0 left-0 w-[500px] h-[400px] pointer-events-none z-0"
+          style={{ background: 'radial-gradient(ellipse at bottom left, rgba(6,182,212,0.1) 0%, rgba(14,165,233,0.05) 45%, transparent 70%)' }}
+        />
+
+        <div className="absolute inset-0 z-0 pointer-events-none opacity-30">
+          <FloatingLines
             enabledWaves={['top', 'middle', 'bottom']}
             lineCount={[12, 18, 24]}
             lineDistance={[7, 5, 3]}
@@ -138,18 +154,18 @@ export default function ITInfrastructure() {
             bendStrength={-0.6}
             interactive={true}
             parallax={true}
-            linesGradient={['#4073b3', '#0f1c57', '#f54575']}
+            linesGradient={['#0EA5E9', '#38BDF8', '#0284C7', '#06B6D4']}
           />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-4">
-          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-400/20 text-xs font-semibold text-blue-300 uppercase tracking-wider">
-            <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 border border-sky-200 text-xs font-semibold text-sky-700 uppercase tracking-wider shadow-sm">
+            <span className="w-2 h-2 rounded-full bg-sky-500 animate-pulse" />
             Enterprise Services
           </span>
-          <h1 className="text-4.5xl sm:text-5xl font-extrabold font-display tracking-tight text-white leading-tight">
-            IT Infrastructure Led Services
+          <h1 className="text-4.5xl sm:text-5xl font-extrabold font-display tracking-tight text-[#0F172A] leading-tight">
+            <span className="bg-gradient-to-r from-sky-500 via-sky-600 to-cyan-500 bg-clip-text text-transparent">IT Infrastructure</span> Led Services
           </h1>
-          <p className="text-slate-300 text-base sm:text-lg max-w-3xl font-light leading-relaxed">
+          <p className="text-slate-600 text-base sm:text-lg max-w-3xl font-light leading-relaxed">
             From physical optical trunk terminations to virtual machine resource configurations, we deliver highly compliant systems engineering.
           </p>
         </div>
@@ -158,7 +174,7 @@ export default function ITInfrastructure() {
       {/* 2. Interactive Navigation Section */}
       <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
+
           {/* Left Navigation Column */}
           <div className="lg:col-span-4 bg-white rounded-2xl border border-slate-100 p-4 shadow-sm space-y-1">
             <span className="text-[10px] text-slate-400 font-extrabold uppercase tracking-wider block px-4 mb-3">Service Spectrum</span>
@@ -168,9 +184,8 @@ export default function ITInfrastructure() {
                 <button
                   key={item.id}
                   onClick={() => setActiveTab(item.id)}
-                  className={`w-full relative flex items-center justify-between px-4 py-3.5 rounded-xl text-left text-sm font-semibold transition-all cursor-pointer overflow-hidden ${
-                    isActive ? 'text-blue-600' : 'text-slate-700 hover:bg-slate-50'
-                  }`}
+                  className={`w-full relative flex items-center justify-between px-4 py-3.5 rounded-xl text-left text-sm font-semibold transition-all cursor-pointer overflow-hidden ${isActive ? 'text-blue-600' : 'text-slate-700 hover:bg-slate-50'
+                    }`}
                 >
                   {/* Sliding active pill background */}
                   {isActive && (
@@ -194,7 +209,7 @@ export default function ITInfrastructure() {
 
           {/* Right Content Pane */}
           <div className="lg:col-span-8 bg-white rounded-2xl border border-slate-100 p-8 sm:p-10 shadow-md min-h-[520px] flex flex-col justify-between overflow-hidden">
-            
+
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeTab}
@@ -272,56 +287,56 @@ export default function ITInfrastructure() {
         </div>
       </section>
 
-      {/* 3. SLA and Operations Section */}
-      <section className="py-20 bg-slate-900 text-white relative overflow-hidden">
+      {/* 3. SLA and Operations Section — OCEANIC SKY BLUE GRADIENT */}
+      <section className="py-20 bg-gradient-to-r from-[#0369A1] via-[#0284C7] to-[#0EA5E9] text-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            
+
             <div className="space-y-6">
-              <span className="text-xs uppercase font-extrabold tracking-wider text-blue-400">Operations Guidelines</span>
-              <h3 className="text-2xl sm:text-4xl font-extrabold font-display tracking-tight leading-tight">
+              <span className="text-xs uppercase font-extrabold tracking-wider text-sky-200">Operations Guidelines</span>
+              <h3 className="text-2xl sm:text-4xl font-extrabold font-display tracking-tight leading-tight text-white">
                 Standard SLA Commitments
               </h3>
-              <p className="text-slate-300 font-light text-sm sm:text-base leading-relaxed">
-                GLOBX operates on highly structured maintenance contracts designed to match critical enterprise workloads. We outline exact response hours based on incident classification.
+              <p className="text-sky-100 font-light text-sm sm:text-base leading-relaxed">
+                GLTech Solutions operates on highly structured maintenance contracts designed to match critical enterprise workloads. We outline exact response hours based on incident classification.
               </p>
-              
+
               <div className="grid grid-cols-2 gap-4">
-                <motion.div 
-                  whileHover={{ y: -4, borderColor: 'rgba(59, 130, 246, 0.4)', backgroundColor: 'rgba(255, 255, 255, 0.02)' }}
+                <motion.div
+                  whileHover={{ y: -4, borderColor: 'rgba(255, 255, 255, 0.4)', backgroundColor: 'rgba(255, 255, 255, 0.15)' }}
                   transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-                  className="border border-slate-800 p-4 rounded-xl cursor-default"
+                  className="border border-white/25 bg-white/10 backdrop-blur-sm p-4 rounded-2xl cursor-default"
                 >
                   <div className="text-xl font-bold text-white">4 Hours</div>
-                  <div className="text-xs text-slate-400 mt-1">Severity 1 (Critical outage) onsite resolution response</div>
+                  <div className="text-xs text-sky-100 mt-1">Severity 1 (Critical outage) onsite resolution response</div>
                 </motion.div>
-                <motion.div 
-                  whileHover={{ y: -4, borderColor: 'rgba(59, 130, 246, 0.4)', backgroundColor: 'rgba(255, 255, 255, 0.02)' }}
+                <motion.div
+                  whileHover={{ y: -4, borderColor: 'rgba(255, 255, 255, 0.4)', backgroundColor: 'rgba(255, 255, 255, 0.15)' }}
                   transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-                  className="border border-slate-800 p-4 rounded-xl cursor-default"
+                  className="border border-white/25 bg-white/10 backdrop-blur-sm p-4 rounded-2xl cursor-default"
                 >
                   <div className="text-xl font-bold text-white">Next Business Day</div>
-                  <div className="text-xs text-slate-400 mt-1">Severity 2 hardware replacement logistics</div>
+                  <div className="text-xs text-sky-100 mt-1">Severity 2 hardware replacement logistics</div>
                 </motion.div>
               </div>
             </div>
 
-            <motion.div 
-              whileHover={{ y: -4, borderColor: 'rgba(255, 255, 255, 0.15)' }}
+            <motion.div
+              whileHover={{ y: -4, borderColor: 'rgba(255, 255, 255, 0.4)' }}
               transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-              className="bg-slate-800/50 border border-slate-800 p-8 rounded-3xl space-y-6 cursor-default"
+              className="bg-white/15 backdrop-blur-md border border-white/25 p-8 rounded-3xl space-y-6 cursor-default shadow-xl"
             >
-              <h4 className="text-base font-bold font-display text-white border-b border-slate-800 pb-3">Standard Maintenance Tasks</h4>
-              <ul className="space-y-4 text-sm text-slate-300">
+              <h4 className="text-base font-bold font-display text-white border-b border-white/20 pb-3">Standard Maintenance Tasks</h4>
+              <ul className="space-y-4 text-sm text-sky-100">
                 <li className="flex gap-3">
-                  <span className="w-5 h-5 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-400 font-bold shrink-0 mt-0.5">1</span>
+                  <span className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center text-white font-bold shrink-0 mt-0.5">1</span>
                   <div>
                     <span className="font-semibold text-white block">Preventative Auditing:</span>
                     Quarterly onsite evaluations checking cabling decay, power backups, and switch fan dust screens.
                   </div>
                 </li>
                 <li className="flex gap-3">
-                  <span className="w-5 h-5 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-400 font-bold shrink-0 mt-0.5">2</span>
+                  <span className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center text-white font-bold shrink-0 mt-0.5">2</span>
                   <div>
                     <span className="font-semibold text-white block">Dynamic Log Monitoring:</span>
                     Aggregation of authentication logs to monitor security incidents and unauthorized root attempts.
