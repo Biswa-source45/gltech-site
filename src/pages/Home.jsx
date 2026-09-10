@@ -5,14 +5,14 @@ import { ArrowRight, Server, Shield, Network, Cpu, Terminal, Lock, Zap, Target, 
 function Counter({ target, suffix = "", duration = 2 }) {
   const ref = useRef(null);
   const count = useMotionValue(0);
-  
+
   // Format numbers, supporting decimals (e.g., 99.8)
   const decimals = target.toString().includes('.') ? (target.toString().split('.')[1] || '').length : 0;
-  
+
   const rounded = useTransform(count, (latest) => {
     return latest.toFixed(decimals) + suffix;
   });
-  
+
   const inView = useInView(ref, { once: true, margin: "-50px" });
 
   useEffect(() => {
@@ -268,7 +268,7 @@ function Home({ onNavigate }) {
   const renderPartnerLogo = (id) => {
     let src;
     let alt;
-    switch(id) {
+    switch (id) {
       case 'adobe':
         src = logoAdobe;
         alt = "Adobe";
@@ -329,9 +329,9 @@ function Home({ onNavigate }) {
         return null;
     }
     return (
-      <img 
-        src={src} 
-        alt={alt} 
+      <img
+        src={src}
+        alt={alt}
         className={`max-w-full object-contain ${id === 'google' ? 'max-h-14 scale-125' : 'max-h-11'}`}
       />
     );
@@ -465,34 +465,34 @@ function Home({ onNavigate }) {
   ];
 
   const empanelmentClients = [
-    { 
-      name: "NSIC", 
-      fullName: "National Small Industries Corporation", 
-      logo: clientNsic, 
+    {
+      name: "NSIC",
+      fullName: "National Small Industries Corporation",
+      logo: clientNsic,
       category: "Government of India Enterprise",
       badge: "Empaneled",
       imgClass: "max-h-14 sm:max-h-16 max-w-[85%]"
     },
-    { 
-      name: "ESC India", 
-      fullName: "Electronics & Computer Software Export Promotion Council", 
-      logo: clientEsc, 
+    {
+      name: "ESC India",
+      fullName: "Electronics & Computer Software Export Promotion Council",
+      logo: clientEsc,
       category: "Export Promotion Council",
       badge: "Member Org",
       imgClass: "max-h-16 sm:max-h-18 max-w-[90%] scale-115"
     },
-    { 
-      name: "RailTel", 
-      fullName: "RailTel Corporation of India Limited", 
-      logo: clientRailtel, 
+    {
+      name: "RailTel",
+      fullName: "RailTel Corporation of India Limited",
+      logo: clientRailtel,
       category: "Telecom & IT Infrastructure",
       badge: "Empaneled Integrator",
       imgClass: "max-h-18 sm:max-h-20 max-w-[90%] scale-125"
     },
-    { 
-      name: "OCAC", 
-      fullName: "Odisha Computer Application Centre", 
-      logo: clientOcac, 
+    {
+      name: "OCAC",
+      fullName: "Odisha Computer Application Centre",
+      logo: clientOcac,
       category: "State Nodal IT Agency",
       badge: "State Empanelment",
       imgClass: "max-h-20 sm:max-h-24 max-w-[95%] scale-[1.75]"
@@ -722,7 +722,7 @@ function Home({ onNavigate }) {
                   <div className="text-xl sm:text-2xl font-black font-display text-[#0F172A] tracking-tight">
                     Zero-Trust
                   </div>
-                  <div className="text-xs text-slate-500 font-medium">Next-Gen Cyber Security</div>
+                  <div className="text-xs text-slate-500 font-medium">Advanced Cyber Security</div>
                 </div>
               </div>
 
@@ -748,7 +748,7 @@ function Home({ onNavigate }) {
         <div className="max-w-7xl mx-auto px-4 text-center mb-6">
           <span className="text-xs uppercase font-bold tracking-widest text-slate-400">Our Strategic OEM Alliances</span>
         </div>
-        
+
         {/* Infinite scrolling wrapper */}
         <div className="w-full overflow-hidden relative flex mask-horizontal-fades py-2">
           <div className="flex animate-marquee whitespace-nowrap min-w-max">
@@ -935,7 +935,7 @@ function Home({ onNavigate }) {
       </section>
 
       {/* 5. ESTEEMED CLIENTS SECTION — DUAL INFINITE MARQUEES */}
-      <section 
+      <section
         id="esteemed-clients-section"
         className="py-20 bg-white border-b border-slate-200/70 overflow-hidden relative"
       >
@@ -965,19 +965,19 @@ function Home({ onNavigate }) {
             </div>
 
             <div className="w-full overflow-hidden relative flex mask-horizontal-fades py-3 group">
-              <div 
+              <div
                 className="flex animate-marquee-reverse whitespace-nowrap min-w-max group-hover:[animation-play-state:paused]"
                 style={{ animationDuration: '65s' }}
               >
                 {[...governmentClients, ...governmentClients, ...governmentClients].map((client, idx) => (
-                  <div 
+                  <div
                     key={`gov-${idx}`}
                     className="flex items-center justify-center mx-5 sm:mx-7 h-24 w-44 sm:w-56 shrink-0 bg-slate-50/90 rounded-2xl p-3 shadow-sm border border-slate-200/70 hover:scale-105 hover:border-sky-300 hover:bg-white hover:shadow-md transition-all duration-300"
                     title={client.fullName}
                   >
-                    <img 
-                      src={client.logo} 
-                      alt={client.fullName} 
+                    <img
+                      src={client.logo}
+                      alt={client.fullName}
                       className={`max-h-16 sm:max-h-20 w-auto max-w-full object-contain transition-all duration-300 ${client.imgClass || ''}`}
                       onError={(e) => {
                         e.target.onerror = null;
@@ -999,19 +999,19 @@ function Home({ onNavigate }) {
             </div>
 
             <div className="w-full overflow-hidden relative flex mask-horizontal-fades py-3 group">
-              <div 
+              <div
                 className="flex animate-marquee whitespace-nowrap min-w-max group-hover:[animation-play-state:paused]"
                 style={{ animationDuration: '45s' }}
               >
                 {[...privateClients, ...privateClients, ...privateClients, ...privateClients].map((client, idx) => (
-                  <div 
+                  <div
                     key={`pvt-${idx}`}
                     className="flex items-center justify-center mx-5 sm:mx-7 h-24 w-44 sm:w-56 shrink-0 bg-slate-50/90 rounded-2xl p-3 shadow-sm border border-slate-200/70 hover:scale-105 hover:border-sky-300 hover:bg-white hover:shadow-md transition-all duration-300"
                     title={client.fullName}
                   >
-                    <img 
-                      src={client.logo} 
-                      alt={client.fullName} 
+                    <img
+                      src={client.logo}
+                      alt={client.fullName}
                       className={`max-h-16 sm:max-h-20 w-auto max-w-full object-contain transition-all duration-300 ${client.imgClass || ''}`}
                       onError={(e) => {
                         e.target.onerror = null;
@@ -1037,7 +1037,7 @@ function Home({ onNavigate }) {
           {/* Static Uniform Logo Cards Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 items-center justify-items-center max-w-5xl mx-auto">
             {empanelmentClients.map((client, idx) => (
-              <div 
+              <div
                 key={`emp-${idx}`}
                 className="group relative w-full max-w-[240px] h-28 sm:h-32 bg-white border border-slate-200/90 rounded-2xl p-4 flex items-center justify-center overflow-hidden shadow-sm transition-all duration-300 hover:border-sky-400 hover:shadow-lg hover:-translate-y-1"
                 title={client.fullName}
@@ -1049,9 +1049,9 @@ function Home({ onNavigate }) {
 
                 {/* Logo Container */}
                 <div className="h-20 w-full flex items-center justify-center px-2 z-0 transition-transform duration-300 group-hover:scale-105">
-                  <img 
-                    src={client.logo} 
-                    alt={client.name} 
+                  <img
+                    src={client.logo}
+                    alt={client.name}
                     className={`w-auto h-auto object-contain ${client.imgClass || 'max-h-14 sm:max-h-16 max-w-[82%]'}`}
                     onError={(e) => {
                       e.target.onerror = null;
@@ -1082,10 +1082,10 @@ function Home({ onNavigate }) {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-            
+
             {/* Title / Left Block */}
             <div className="flex-1 text-center md:text-left space-y-3">
-              <motion.h2 
+              <motion.h2
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -1118,8 +1118,8 @@ function Home({ onNavigate }) {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ type: 'spring', stiffness: 100, damping: 15, delay: idx * 0.1 }}
-                  whileHover={{ 
-                    scale: 1.06, 
+                  whileHover={{
+                    scale: 1.06,
                     boxShadow: '0 0 35px rgba(56, 189, 248, 0.4)',
                     borderColor: 'rgba(255, 255, 255, 0.8)'
                   }}
@@ -1130,9 +1130,9 @@ function Home({ onNavigate }) {
                     <div className="w-1/2 h-[220%] bg-white/25 absolute -top-12 left-0 bg-gradient-to-r from-transparent via-white/50 to-transparent animate-glaze-loop"></div>
                   </div>
 
-                  <img 
-                    src={cert.img} 
-                    alt={cert.title} 
+                  <img
+                    src={cert.img}
+                    alt={cert.title}
                     className="w-full h-full object-contain rounded-xl transition-all duration-300"
                   />
                 </motion.div>

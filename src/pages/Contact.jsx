@@ -30,7 +30,7 @@ export default function Contact() {
 
   return (
     <div className="w-full bg-slate-50 font-sans">
-      
+
       {/* 1. Header Banner */}
       <section className="bg-gradient-to-b from-white via-[#F8FAFC] to-[#F1F5F9] text-[#0F172A] py-16 relative overflow-hidden border-b border-slate-200/70">
         <div className="absolute inset-0 opacity-[0.035] pointer-events-none" style={{
@@ -40,7 +40,7 @@ export default function Contact() {
         <div className="absolute top-0 right-0 w-[550px] h-[450px] pointer-events-none z-0" style={{ background: 'radial-gradient(ellipse at top right, rgba(14,165,233,0.12) 0%, rgba(56,189,248,0.06) 40%, transparent 70%)' }} />
         <div className="absolute bottom-0 left-0 w-[500px] h-[400px] pointer-events-none z-0" style={{ background: 'radial-gradient(ellipse at bottom left, rgba(6,182,212,0.1) 0%, rgba(14,165,233,0.05) 45%, transparent 70%)' }} />
         <div className="absolute inset-0 z-0 pointer-events-none opacity-30">
-          <FloatingLines 
+          <FloatingLines
             enabledWaves={['top', 'middle', 'bottom']}
             lineCount={[8, 12, 16]}
             lineDistance={[8, 6, 4]}
@@ -65,10 +65,10 @@ export default function Contact() {
       {/* 2. Interactive Columns */}
       <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          
+
           {/* Contact Details & Map Left */}
           <div className="lg:col-span-5 space-y-8">
-            
+
             <div className="space-y-4">
               <span className="text-xs uppercase font-extrabold tracking-wider text-blue-600">Offices & Support</span>
               <h2 className="text-3xl font-bold font-display text-brand-dark tracking-tight">GL Tech Solutions Headquarters</h2>
@@ -123,7 +123,7 @@ export default function Contact() {
             </ul>
 
             {/* Interactive Embedded Google Map */}
-            <motion.div 
+            <motion.div
               whileHover={{ y: -4, borderColor: 'rgba(59, 130, 246, 0.4)', boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)' }}
               transition={{ type: 'spring', stiffness: 300, damping: 20 }}
               className="relative border border-slate-200/80 rounded-2xl overflow-hidden bg-slate-100 shadow-inner h-72 group cursor-default"
@@ -152,7 +152,7 @@ export default function Contact() {
 
           {/* Contact Inquiry Form Right */}
           <div className="lg:col-span-7 bg-white rounded-3xl border border-slate-100 p-8 sm:p-10 shadow-md">
-            
+
             {!formSubmitted ? (
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="space-y-1">
@@ -171,7 +171,7 @@ export default function Contact() {
                       value={formData.name}
                       onChange={handleInputChange}
                       className="w-full bg-slate-50 border border-slate-200 focus:border-blue-500 focus:bg-white rounded-xl px-4 py-3 text-sm transition-all outline-none"
-                      placeholder="e.g. Debendra Mohanty"
+                      placeholder="e.g. Rudra Prasad Rautray"
                     />
                   </div>
                   <div className="space-y-1.5">
@@ -185,7 +185,7 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleInputChange}
                       className="w-full bg-slate-50 border border-slate-200 focus:border-blue-500 focus:bg-white rounded-xl px-4 py-3 text-sm transition-all outline-none"
-                      placeholder="e.g. debendra@company.com"
+                      placeholder="e.g. rudra@company.com"
                     />
                   </div>
                 </div>
@@ -201,7 +201,7 @@ export default function Contact() {
                       value={formData.phone}
                       onChange={handleInputChange}
                       className="w-full bg-slate-50 border border-slate-200 focus:border-blue-500 focus:bg-white rounded-xl px-4 py-3 text-sm transition-all outline-none"
-                      placeholder="e.g. +91 94370 00000"
+                      placeholder="e.g. +91 6370796391"
                     />
                   </div>
                   <div className="space-y-1.5">
