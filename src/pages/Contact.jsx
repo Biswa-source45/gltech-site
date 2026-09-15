@@ -82,9 +82,13 @@ export default function Contact() {
                 <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 shrink-0 mt-0.5 border border-blue-100">
                   <MapPin className="w-5 h-5" />
                 </div>
-                <div>
+                {/* <div>
                   <span className="font-semibold text-brand-dark block text-xs uppercase tracking-wider text-slate-400">Headquarters Address</span>
                   <span className="leading-relaxed text-sm"> GL Tech Solutions, Plot No- HIG/141, Kanan Vihar, Phase-1, Chadrashekharpur, Bhubaneswar - 751024</span>
+                </div> */}
+                <div>
+                  <span className="font-semibold text-brand-dark block text-xs uppercase tracking-wider text-slate-400">Headquarters Address</span>
+                  <span className="leading-relaxed text-sm"> Globx System And Network Pvt. Ltd., Saheed Nagar, Bhubaneswar, Odisha - 751007</span>
                 </div>
               </li>
               <li className="flex gap-4 items-start">
@@ -130,7 +134,7 @@ export default function Contact() {
             >
               <iframe
                 title="GL Tech Solutions Headquarters Location Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59872.1085718906!2d85.80711909251602!3d20.29998625848554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a190bd65aa2ad1d%3A0xe69acb08745a4b10!2sGL+Tech+Solutions!5e0!3m2!1sen!2sin!4v1782884757514!5m2!1sen!2sin"
+                src="https://www.google.com/maps?q=20.2905158,85.8483434&z=17&output=embed"
                 className="w-full h-full border-0 transition-all duration-300"
                 allowFullScreen=""
                 loading="lazy"
@@ -138,7 +142,7 @@ export default function Contact() {
               ></iframe>
               <div className="absolute bottom-3 right-3 z-10">
                 <a
-                  href="https://maps.google.com/?q=GL+Tech+Solutions,+Plot+No-+HIG/141,+Kanan+Vihar,+Phase-1,+Chadrashekharpur,+Bhubaneswar+-+751024"
+                  href="https://maps.app.goo.gl/TAJB76G4aZbbQiBD9"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-blue-600 hover:bg-blue-700 text-white font-bold text-[10px] uppercase tracking-wider px-3.5 py-1.5 rounded-lg inline-flex items-center gap-1 shadow-md hover:shadow-lg transition-all"

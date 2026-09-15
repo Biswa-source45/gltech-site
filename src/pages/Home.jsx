@@ -861,7 +861,7 @@ function Home({ onNavigate }) {
             />
 
             {/* Card 6: Workflow automation */}
-            <SolutionCard
+            {/* <SolutionCard
               icon={<Terminal className="w-16 h-16" />}
               iconBg="bg-amber-50"
               iconColor="text-amber-600"
@@ -869,7 +869,7 @@ function Home({ onNavigate }) {
               description="Map and automate operational logic, eliminate manual document processing, and improve resource scheduling pipelines."
               bgImage={imgTeamCollaboration}
               onClick={() => onNavigate('service-detail', 'it-applications')}
-            />
+            /> */}
 
           </div>
         </div>

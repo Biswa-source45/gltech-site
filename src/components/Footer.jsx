@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin, ChevronRight } from 'lucide-react';
+import Logo from './Logo';
 
 export default function Footer({ onNavigate }) {
   const handleLinkClick = (page, detailId = null) => {
@@ -33,6 +34,7 @@ export default function Footer({ onNavigate }) {
           {/* Column 1: Brand & About */}
           <div className="space-y-6">
             <div className="flex items-center cursor-pointer" onClick={() => handleLinkClick('home')}>
+              <Logo className="h-14 w-14 mr-3" />
               <span className="text-2xl font-display font-bold tracking-tight text-[#F8FAFC]">GLTech Solutions</span>
             </div>
             <div className="flex items-center justify-between w-[180px] pt-1">
@@ -122,9 +124,14 @@ export default function Footer({ onNavigate }) {
             <ul className="space-y-4 text-sm text-[#94A3B8]">
               <li className="flex gap-3">
                 <MapPin className="w-5 h-5 text-[#3B82F6] shrink-0 mt-1" />
-                <span className="leading-relaxed text-[#94A3B8]">
-                  Plot No- HIG/141, Kanan Vihar, Phase-1, Chadrashekharpur, Bhubaneswar - 751024
-                </span>
+                <a
+                  href="https://maps.app.goo.gl/TAJB76G4aZbbQiBD9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="leading-relaxed text-[#94A3B8] hover:text-[#F8FAFC] transition-colors"
+                >
+                  Plot No-257, Saheed Nagar, Bhubaneswar, Odisha - 751007
+                </a>
               </li>
               <li className="flex gap-3 items-center">
                 <Phone className="w-5 h-5 text-[#3B82F6] shrink-0" />

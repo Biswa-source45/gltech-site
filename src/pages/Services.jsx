@@ -2,10 +2,17 @@ import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle2, ClipboardCheck, Compass, Headphones, LayoutGrid } from 'lucide-react';
 import { useState } from 'react';
 import serverRacks from '../assets/server_racks.png';
-import teamCollaboration from '../assets/team_collaboration.png';
 import fiberNetwork from '../assets/fiber_network.png';
 import securitySolutions from '../assets/solutions/security-solutions.png';
 import surveillanceSolutions from '../assets/solutions/surveillance-solutions.png';
+
+// Dedicated Service Assets
+import desktopIntegrationImg from '../assets/services/desktop-integration.jpg';
+import itInfrastructureImg from '../assets/services/it-infrastructure-led.jpg';
+import cloudInfrastructureImg from '../assets/services/cloud-infrastructure.jpg';
+import softwareDevelopmentImg from '../assets/services/software-development.jpg';
+import businessProcessImg from '../assets/services/business-process.jpg';
+import enterpriseErpImg from '../assets/services/enterprise-erp.jpg';
 
 const services = [
   {
@@ -13,7 +20,7 @@ const services = [
     title: 'Desktop Integration',
     description: 'Seamlessly connect workstations, applications, users, and security controls to the rest of your IT environment.',
     features: ['Workstation deployment and configuration', 'Operating system installation and updates', 'Software installation and management', 'User account setup and management', 'Desktop security implementation'],
-    image: teamCollaboration
+    image: desktopIntegrationImg
   },
   {
     id: 'server-storage-solutions',
@@ -37,12 +44,47 @@ const services = [
     image: securitySolutions
   },
   {
+    id: 'it-infrastructure-led',
+    title: 'IT Infrastructure Led Services',
+    description: 'Comprehensive IT infrastructure services to ensure optimal performance, reliability, and scalability.',
+    features: ['Datacenter design and implementation', 'Bare-metal and virtualized server clustering', '24/7 proactive infrastructure telemetry', 'Cloud integration and migration', 'Disaster recovery and backup planning'],
+    image: itInfrastructureImg
+  },
+  {
+    id: 'cloud-solutions',
+    title: 'Cloud Infrastructure & Hybrid Hosting',
+    description: 'Bridge local systems with high-security public cloud infrastructure, elastic compute, and resilient backup.',
+    features: ['Multi-cloud architecture (AWS, Azure, GCP)', 'Automated database scaling and replication', 'Kubernetes and container orchestration', 'Direct cloud interconnects', 'Continuous cloud security and FinOps'],
+    image: cloudInfrastructureImg
+  },
+  {
+    id: 'it-applications',
+    title: 'Software Development',
+    description: 'Custom software solutions tailored to your business needs, ensuring optimal performance and scalability.',
+    features: ['Custom application development', 'Web application development', 'Mobile application development', 'Software testing and quality assurance', 'Technical support and maintenance'],
+    image: softwareDevelopmentImg
+  },
+  {
+    id: 'business-process',
+    title: 'Business Process Management & Automation',
+    description: 'Streamline your operations and improve efficiency with our comprehensive business process management and automation solutions.',
+    features: ['Process analysis and optimization', 'Workflow automation', 'Document management', 'Performance monitoring', 'Continuous improvement'],
+    image: businessProcessImg
+  },
+  {
+    id: 'digital-enterprise',
+    title: 'Digital Enterprise ERP Applications',
+    description: 'Integrate and optimize your business processes with our comprehensive ERP solutions.',
+    features: ['Enterprise resource planning', 'Supply chain management', 'Customer relationship management', 'Financial management', 'Reporting and analytics'],
+    image: enterpriseErpImg
+  },
+  {
     id: 'cctv-solutions',
     title: 'CCTV Solutions',
     description: 'Secure your premises and assets with integrated surveillance, video management, remote monitoring, and access control.',
     features: ['IP camera installation and configuration', 'Video management software setup', 'Remote monitoring solutions', 'Video storage and retrieval systems', 'Access control integration'],
     image: surveillanceSolutions
-  }
+  },
 ];
 
 const process = [

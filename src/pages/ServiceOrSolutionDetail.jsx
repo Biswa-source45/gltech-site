@@ -15,6 +15,14 @@ import surveillanceSolutionsImg from '../assets/solutions/surveillance-solutions
 import bmsSolutionsImg from '../assets/solutions/bms-solutions.png';
 import serverStorageImg from '../assets/solutions/server-storage-solutions.png';
 
+// Dedicated High-Resolution Service Assets
+import itInfrastructureLedImg from '../assets/services/it-infrastructure-led.jpg';
+import cloudInfrastructureImg from '../assets/services/cloud-infrastructure.jpg';
+import businessProcessImg from '../assets/services/business-process.jpg';
+import enterpriseErpImg from '../assets/services/enterprise-erp.jpg';
+import desktopIntegrationImg from '../assets/services/desktop-integration.jpg';
+import softwareDevelopmentImg from '../assets/services/software-development.jpg';
+
 const detailsData = {
   // SERVICES
   'it-applications': {
@@ -31,57 +39,130 @@ const detailsData = {
       "AI/ML pipeline integrations for automated text classification and processing"
     ],
     techStack: "React, Node.js, Next.js, Python, PostgreSQL, REST APIs",
-    image: teamCollaboration
+    image: softwareDevelopmentImg
   },
   'business-process': {
-    category: "Services",
+    category: "GL Tech Services",
     title: "Business Process Management & Automation",
-    tagline: "Operational Mapping & Robotic Workflow Engines",
-    icon: <Server className="w-8 h-8 text-cyan-600" />,
-    desc: "Streamline daily business tasks, remove paper bottlenecks, and improve operational transparency. We analyze workflows to engineer automated software routing paths that eliminate manual delays.",
+    tagline: "Operational Mapping, Workflow Orchestration & RPA Engines",
+    icon: <Sliders className="w-8 h-8 text-cyan-600" />,
+    desc: "Streamline daily business tasks, eliminate procedural bottlenecks, and improve operational transparency. We analyze workflows to engineer automated software routing paths, approval chains, and robotic data synchronization that eliminate human error and manual delays.",
     features: [
-      "Corporate workflow analysis and logical operations mapping",
-      "Integration of automated email, SMS, and ticket notification rules",
-      "Electronic document filing structures and approval loops",
-      "Employee timesheet tracking, vacation allocations, and task queues",
-      "Robotic process automation (RPA) for repetitive database entries"
+      "Enterprise workflow auditing and logical process mapping",
+      "Automated multi-tier notification rules (Email, SMS, Webhooks)",
+      "Electronic document filing structures and paperless approval chains",
+      "Employee timesheet tracking, task queues, and SLA compliance alerts",
+      "Robotic Process Automation (RPA) for repetitive cross-database entries",
+      "Integrated analytics dashboards showing operational cycle times"
     ],
-    techStack: "Workplace Engines, RPA Tools, Custom Scripts, WebHooks",
-    image: teamCollaboration
+    techStack: "BPMN 2.0, Camunda, UiPath, Python Automation, Custom Webhooks, Node.js",
+    image: businessProcessImg,
+    slaDescription: "We deliver 99.9% uptime on automation runners, with real-time exception handling and automatic fallback triggers to guarantee smooth corporate operations.",
+    keyFeatures: [
+      { title: "Intelligent Workflow Orchestration", description: "Automate complex approval hierarchies, status handoffs, and notifications across department silos." },
+      { title: "Robotic Process Automation (RPA)", description: "Deploy software bots for repetitive data reconciliation, document processing, and bulk transactional logging." },
+      { title: "Paperless Operations & Archiving", description: "Digitize document intake with OCR indexing, cryptographic signatures, and audit-ready versioning." },
+      { title: "Real-Time Operational Telemetry", description: "Monitor department bottlenecks, queue depths, and turnaround times with interactive executive dashboards." }
+    ],
+    benefits: [
+      "Up to 60% reduction in manual data processing time",
+      "Elimination of repetitive human entry errors",
+      "Transparent visibility into enterprise task progression",
+      "Faster service turnaround for internal and external customers",
+      "Strict auditability and compliance readiness across all workflows"
+    ],
+    supportMaintenance: "Continuous monitoring of automation queues, workflow script maintenance, API endpoint updates, and priority incident mitigation.",
+    whyChooseUs: [
+      "Deep experience integrating enterprise ERPs with legacy workflows",
+      "Certified automation and process engineering architects",
+      "Rapid prototyping with phased milestone deployments",
+      "End-to-end user training and operational runbook handover"
+    ]
   },
   'digital-enterprise': {
-    category: "Services",
+    category: "GL Tech Services",
     title: "Digital Enterprise ERP Applications",
-    tagline: "Unified ERP Customization & CRM Alignments",
+    tagline: "Unified ERP Implementation, Customization & Supply Chain Sync",
     icon: <Database className="w-8 h-8 text-indigo-600" />,
-    desc: "Consolidate inventory pools, customer records, accounting books, and support tasks under a single enterprise database. We integrate and customize robust ERP systems designed to scale.",
+    desc: "Consolidate inventory pools, customer records, accounting books, supply chain logistics, and HR operations under a unified enterprise database. We specialize in configuring, deploying, and supporting modular ERP environments that scale with business expansion.",
     features: [
-      "ERP software installation, setup configuration, and support",
-      "Inventory tracking pipelines with barcoding and multi-warehouse sync",
-      "Billing systems, automated purchase orders, and tax ledger audits",
-      "CRM portal deployment mapping customer support ticket history",
-      "User security permissions profiles (Role-Based Access Control)"
+      "ERP software architecture, database provisioning, and security hardening",
+      "Multi-warehouse inventory management with barcode and RFID sync",
+      "Integrated financial accounting, automated purchase orders, and tax audits",
+      "CRM portal integration mapping customer interactions and support pipelines",
+      "Role-Based Access Control (RBAC) and data isolation compliance"
     ],
-    techStack: "Odoo, SAP, Oracle NetSuite, Custom ERP Modules",
-    image: onetrackDashboard
+    techStack: "SAP, Oracle NetSuite, Odoo Enterprise, PostgreSQL, REST APIs",
+    image: enterpriseErpImg,
+    slaDescription: "High-availability ERP hosting, automated incremental backups every 4 hours, and rigorous disaster recovery protocols.",
+    keyFeatures: [
+      { title: "Centralized Enterprise Data", description: "Eliminate data silos by uniting sales, inventory, procurement, finance, and human resources in one coherent database." },
+      { title: "Real-Time Supply Chain Tracking", description: "Track stock levels, purchase orders, shipments, and vendor fulfillment with live automated re-order thresholds." },
+      { title: "Automated Financial & Tax Auditing", description: "Ensure compliance with automated ledger reconciliations, invoice verification, and audit logs." },
+      { title: "Custom Executive Dashboards", description: "Visualize KPIs, revenue projections, and operational performance with custom interactive dashboards." }
+    ],
+    benefits: [
+      "Complete single-pane visibility across all business units",
+      "Optimized inventory carrying costs and stock-out prevention",
+      "Accelerated financial closing and audit compliance cycles",
+      "Scalable architecture prepared for cross-branch enterprise growth"
+    ],
+    supportMaintenance: "Dedicated ERP database administration, patch management, security vulnerability remediation, and scheduled off-peak schema updates.",
+    whyChooseUs: [
+      "Proven experience in enterprise ERP rollout for commercial & public sectors",
+      "Zero-data-loss migration pipelines from legacy accounting systems",
+      "Tailored modules engineered specifically to client operational needs",
+      "Comprehensive user training and post-deployment support SLAs"
+    ]
   },
 
   // GL TECH SERVICES
   'desktop-integration': {
     category: "GL Tech Services",
     title: "Desktop Integration",
-    tagline: "Connected Workstations for Productive Teams",
+    tagline: "A Unified Digital Workplace for Productive, Secure Teams",
     icon: <Cpu className="w-8 h-8 text-blue-600" />,
-    desc: "Our desktop integration services ensure that workstations are seamlessly connected to your overall IT infrastructure, maximizing productivity and minimizing downtime.",
+    desc: "Our Desktop Integration Services connect employee workstations, enterprise applications, and IT infrastructure into a unified digital workplace. We ensure seamless deployment, secure configuration, centralized management, and ongoing support, enabling organizations to maintain productivity, compliance, and operational efficiency across all business units.",
     features: [
       "Workstation deployment and configuration",
-      "Operating system installation and updates",
-      "Software installation and management",
-      "User account setup and management",
-      "Desktop security implementation"
+      "Operating system installation, migration, and updates",
+      "Enterprise software installation and lifecycle management",
+      "User account provisioning and access management",
+      "Desktop security implementation and endpoint protection",
+      "Device inventory tracking and asset management",
+      "Printer, scanner, and peripheral integration",
+      "Remote desktop and VPN configuration",
+      "Active Directory and domain integration",
+      "Data backup and recovery configuration"
     ],
     techStack: "Windows, Microsoft 365, Endpoint Management, Active Directory",
-    image: teamCollaboration
+    image: desktopIntegrationImg,
+    slaDescription: "Our desktop integration solutions streamline device management, improve system reliability, and reduce operational disruptions through proactive monitoring and standardized deployment practices.",
+    keyFeatures: [
+      { title: "Centralized Device Management", description: "Manage all desktop systems through a unified administrative framework, ensuring consistency and compliance across the organization." },
+      { title: "Secure Endpoint Protection", description: "Implement enterprise-grade antivirus, firewall, encryption, and security policies to safeguard business-critical data." },
+      { title: "Automated Software Deployment", description: "Reduce manual effort through automated application installation, updates, and patch management processes." },
+      { title: "User Access Control", description: "Configure role-based access permissions and authentication mechanisms to maintain secure access to corporate resources." },
+      { title: "Remote Workforce Enablement", description: "Support hybrid and remote employees with secure VPN connectivity, remote assistance, and collaboration tool integration." }
+    ],
+    benefits: [
+      "Improved employee productivity",
+      "Reduced IT support overhead",
+      "Faster onboarding and device provisioning",
+      "Enhanced security and compliance",
+      "Minimized downtime and operational disruptions",
+      "Standardized desktop environments across locations",
+      "Better visibility into IT assets and system health"
+    ],
+    supportMaintenance: "Our team provides continuous monitoring, troubleshooting, and maintenance services to ensure your desktop infrastructure remains secure, updated, and fully operational. We offer SLA-driven support with rapid incident response and proactive system health checks.",
+    whyChooseUs: [
+      "Experienced desktop infrastructure specialists",
+      "Enterprise-grade deployment methodologies",
+      "Secure and compliant implementation practices",
+      "Scalable solutions for growing organizations",
+      "Dedicated technical support and ongoing optimization",
+      "Proven expertise in modern workplace technologies"
+    ]
   },
   'networking-solutions': {
     category: "GL Tech Services",
@@ -97,7 +178,17 @@ const detailsData = {
       "Network monitoring and maintenance"
     ],
     techStack: "Cisco, Ruckus, Fortinet, Wi-Fi 6, SD-WAN, Fiber Networks",
-    image: fiberNetwork
+    image: fiberNetwork,
+    slaDescription: "We plan, deploy, and monitor resilient wired and wireless networks with documented configurations, performance baselines, and responsive incident support.",
+    keyFeatures: [
+      { title: "Structured Network Design", description: "Create scalable LAN, WAN, wireless, and branch network architectures aligned to your users, applications, and sites." },
+      { title: "Secure Connectivity", description: "Segment traffic, protect remote access, and apply practical security policies across wired, wireless, and VPN connections." },
+      { title: "Performance Monitoring", description: "Track availability, capacity, latency, and device health so issues are identified before they disrupt operations." },
+      { title: "Business Continuity", description: "Build resilient links and documented recovery procedures to keep critical communication available." }
+    ],
+    benefits: ["Reliable connectivity across locations", "Faster issue detection and resolution", "Secure access for office and remote users", "Scalable infrastructure for growth", "Clear network visibility and documentation"],
+    supportMaintenance: "Our network team provides configuration backups, health checks, troubleshooting, firmware planning, and SLA-driven response for business-critical connectivity.",
+    whyChooseUs: ["Certified network engineering experience", "Vendor-neutral architecture recommendations", "Security-first implementation practices", "Clear documentation and handover", "Ongoing monitoring and optimization"]
   },
   'security-equipment': {
     category: "GL Tech Services",
@@ -113,7 +204,17 @@ const detailsData = {
       "Data encryption solutions"
     ],
     techStack: "Fortinet, Sophos, Endpoint Protection, VPN, Encryption",
-    image: securitySolutionsImg
+    image: securitySolutionsImg,
+    slaDescription: "We strengthen the security perimeter through layered controls, policy reviews, endpoint protection, and continuous attention to emerging operational risks.",
+    keyFeatures: [
+      { title: "Layered Threat Protection", description: "Combine firewall, endpoint, access, and encryption controls to reduce exposure across the technology environment." },
+      { title: "Security Policy Management", description: "Translate business requirements into maintainable access, filtering, authentication, and incident response policies." },
+      { title: "Audit-Ready Visibility", description: "Centralize logs and configuration records to support investigations, compliance reviews, and informed risk decisions." },
+      { title: "Incident Preparedness", description: "Prepare response procedures and recovery actions that help contain threats and restore normal operations quickly." }
+    ],
+    benefits: ["Reduced security exposure", "Improved compliance readiness", "Faster incident response", "Protected users and business data", "Consistent security controls across sites"],
+    supportMaintenance: "We provide rule reviews, endpoint health checks, signature and firmware updates, alert triage, and practical recommendations as your environment changes.",
+    whyChooseUs: ["Security-focused technical specialists", "Practical controls aligned to business risk", "Vendor and platform integration expertise", "Documented implementation and support", "Proactive review of security posture"]
   },
   'cctv-solutions': {
     category: "GL Tech Services",
@@ -129,7 +230,17 @@ const detailsData = {
       "Access control integration"
     ],
     techStack: "IP Cameras, NVR, VMS, Remote Monitoring, Access Control",
-    image: surveillanceSolutionsImg
+    image: surveillanceSolutionsImg,
+    slaDescription: "Our surveillance deployments combine clear coverage planning, reliable recording, controlled access, and remote visibility to support safer premises.",
+    keyFeatures: [
+      { title: "Coverage-Led Design", description: "Plan camera positions, lenses, lighting, and retention requirements around actual site risks and operating conditions." },
+      { title: "Centralized Video Management", description: "Manage live views, recordings, user permissions, and incident exports through a consistent video platform." },
+      { title: "Remote Visibility", description: "Give authorized teams secure access to alerts and footage across locations without compromising control." },
+      { title: "Integrated Site Security", description: "Connect surveillance with access control, alarms, and monitoring workflows for a coordinated response." }
+    ],
+    benefits: ["Improved site visibility", "Faster incident investigation", "Secure evidence retention", "Remote monitoring across locations", "Better coordination with access control"],
+    supportMaintenance: "We support camera health checks, storage reviews, firmware updates, recording verification, user access management, and system troubleshooting.",
+    whyChooseUs: ["Experience across commercial and institutional sites", "Coverage and retention planning before installation", "Secure remote access configuration", "Documented camera and network layouts", "Responsive maintenance support"]
   },
 
   // SOLUTIONS
@@ -243,23 +354,91 @@ const detailsData = {
       "Virtualization services"
     ],
     techStack: "Dell PowerStore, Synology RackStation, HPE MSA, Veeam Backups",
-    image: serverStorageImg
+    image: serverStorageImg,
+    slaDescription: "We build dependable data platforms with resilient storage, tested backup routines, and documented recovery paths for critical business workloads.",
+    keyFeatures: [
+      { title: "Resilient Storage Architecture", description: "Design storage platforms around capacity, performance, redundancy, retention, and future growth requirements." },
+      { title: "Backup & Recovery Readiness", description: "Configure protected backups and recovery procedures that are tested, documented, and aligned with business priorities." },
+      { title: "Virtualized Infrastructure", description: "Consolidate workloads and improve resource utilization with stable, manageable virtualization platforms." },
+      { title: "Capacity Visibility", description: "Monitor health, utilization, and growth trends so storage decisions remain predictable and proactive." }
+    ],
+    benefits: ["Improved data availability", "Lower risk of data loss", "Predictable storage growth", "Faster recovery from incidents", "Better infrastructure visibility"],
+    supportMaintenance: "Our team provides storage health checks, backup verification, capacity reviews, patch planning, and recovery support under a clear maintenance process.",
+    whyChooseUs: ["Experience with enterprise storage platforms", "Recovery-focused architecture planning", "Documented backup and restore procedures", "Scalable designs for growing workloads", "Ongoing health and capacity monitoring"]
   },
   'cloud-solutions': {
-    category: "Solutions",
-    title: "Managed Cloud Infrastructure & Hosting",
-    tagline: "Secure Hybrid Hosting & Virtual Server Provisioning",
+    category: "GL Tech Services",
+    title: "Managed Cloud Infrastructure & Hybrid Hosting",
+    tagline: "Secure Multi-Cloud Architecture, Virtual Compute & DevOps Pipelines",
     icon: <Server className="w-8 h-8 text-cyan-600" />,
-    desc: "Bridge your local office servers with high-security public cloud databases. We provision virtual computing resources, cloud storage buckets, and secure DNS configurations.",
+    desc: "Bridge on-premise datacenter capabilities with high-security public cloud infrastructure. We design, migrate, and manage hybrid cloud workloads across AWS, Microsoft Azure, and private clouds, providing elastic scalability, automated disaster recovery, and cost-optimized compute resources.",
     features: [
-      "Virtual private cloud (VPC) design and gateway installations",
-      "Database scaling, migration pipelines, and automated replication",
-      "Web application hosting and content delivery network (CDN) setups",
-      "Cloud budget forecasting, utilization reports, and size tuning",
-      "Infrastructure-as-Code setups for repeatable developer environments"
+      "Virtual Private Cloud (VPC) topology design, security groups, and transit gateways",
+      "Automated cloud database scaling, replication, and cross-region failover",
+      "Kubernetes container orchestration and Infrastructure-as-Code (IaC) pipelines",
+      "Direct cloud interconnects (AWS Direct Connect / Azure ExpressRoute) for low latency",
+      "Continuous cloud security posture management (CSPM) and cost optimization audits"
     ],
-    techStack: "AWS, Azure, Cloud DNS, CDN, VMware Hybrid Cloud",
-    image: serverRacks
+    techStack: "AWS, Microsoft Azure, Google Cloud, Terraform, Kubernetes, Docker",
+    image: cloudInfrastructureImg,
+    slaDescription: "SLA-backed cloud availability with 99.99% uptime guarantees, continuous automated health checks, and rapid incident triage.",
+    keyFeatures: [
+      { title: "Hybrid Cloud Connectivity", description: "Seamlessly interconnect on-premise blade servers with public cloud VPCs via encrypted, high-throughput tunnels." },
+      { title: "Automated Elastic Scaling", description: "Auto-scale server clusters dynamically to meet transaction spikes without incurring idle infrastructure expenses." },
+      { title: "Zero-Downtime Migration", description: "Carefully staged database and virtual machine migration pipelines ensuring continuous operational availability." },
+      { title: "Cloud FinOps & Governance", description: "Rigorous cost allocation, idle resource cleanup, and reserved capacity planning to optimize cloud spend." }
+    ],
+    benefits: [
+      "Instant scalability to meet fluctuating enterprise computational demands",
+      "Reduced total cost of ownership through continuous FinOps optimization",
+      "Enterprise-grade disaster recovery across geographically distinct zones",
+      "Faster time-to-market for new digital applications and microservices"
+    ],
+    supportMaintenance: "24/7 cloud environment surveillance, automated vulnerability scanning, snapshot verification, and cost analysis reporting.",
+    whyChooseUs: [
+      "Certified AWS and Microsoft Azure cloud architects",
+      "Proven track record in secure government and enterprise hybrid deployments",
+      "Comprehensive security-first implementation aligning with ISO standards",
+      "Tailored migration roadmaps designed to eliminate business disruption"
+    ]
+  },
+  'it-infrastructure-led': {
+    category: "GL Tech Services",
+    title: "IT Infrastructure Led Services",
+    tagline: "High-Availability Datacenter, Server & Managed IT Operations",
+    icon: <Server className="w-8 h-8 text-sky-600" />,
+    desc: "Our IT Infrastructure Led Services deliver resilient, high-performance foundations for modern enterprises. From mission-critical datacenter design and bare-metal server cluster deployments to proactive 24/7 infrastructure monitoring and disaster recovery, we ensure your operational backbone never sleeps.",
+    features: [
+      "Enterprise datacenter rack architecture, hot/cold aisle cooling design, and power distribution (PDU)",
+      "Bare-metal and virtualized server clustering (VMware vSphere, Microsoft Hyper-V, Proxmox)",
+      "24/7/365 proactive infrastructure telemetry monitoring (CPU, RAM, IOPS, Network Latency)",
+      "Enterprise storage area networks (SAN) and high-density NAS array deployment",
+      "Automated immutable snapshot backups and disaster recovery replication",
+      "Operating system lifecycle, automated patch orchestration, and firmware updates"
+    ],
+    techStack: "Dell PowerEdge, HPE ProLiant, Cisco UCS, VMware vSphere, Veeam, Zabbix",
+    image: itInfrastructureLedImg,
+    slaDescription: "Guaranteed 99.99% infrastructure uptime with 15-minute emergency response SLAs for critical tier-1 outages, supported by our round-the-clock engineering team.",
+    keyFeatures: [
+      { title: "High-Availability Server Clusters", description: "Redundant compute nodes configured with automated failover to eliminate single points of failure across critical services." },
+      { title: "Proactive 24/7 NOC Monitoring", description: "Real-time telemetry tracking hardware health, thermal metrics, disk degradation, and bandwidth spikes before outages occur." },
+      { title: "Resilient Storage & Backup Architectures", description: "Multi-tier enterprise SAN/NAS configurations with immutable ransomware-protected backup pipelines." },
+      { title: "Lifecycle & Security Hardening", description: "Scheduled firmware baselines, OS patch distribution, and CIS-benchmark configuration audits." }
+    ],
+    benefits: [
+      "Maximized uptime and business continuity for critical applications",
+      "Predictable infrastructure performance under demanding workloads",
+      "Reduced capital overhead through optimized resource virtualization",
+      "Rapid disaster recovery with audited Recovery Time Objectives (RTO)",
+      "Peace of mind with 24/7/365 certified technical supervision"
+    ],
+    supportMaintenance: "Round-the-clock Network Operations Center (NOC) surveillance, preventive on-site hardware inspections, firmware patch scheduling, and rapid hardware swap-out warranties.",
+    whyChooseUs: [
+      "Certified enterprise infrastructure engineers and system architects",
+      "Tier-3 and Tier-4 datacenter deployment experience",
+      "Strict SLA commitments with documented escalation matrices",
+      "Vendor-agnostic hardware recommendations tailored to budget and scale"
+    ]
   },
 
   // INDUSTRIES
@@ -314,9 +493,23 @@ const detailsData = {
 };
 
 export default function ServiceOrSolutionDetail({ detailId }) {
-  const currentData = detailsData[detailId];
+  const rawId = (detailId || '').toLowerCase().trim();
+  const aliasMap = {
+    'software-development': 'it-applications',
+    'it-applications-software-development': 'it-applications',
+    'it-infrastructure': 'it-infrastructure-led',
+    'it-infrastructure-led-services': 'it-infrastructure-led',
+    'business-process-management-automation': 'business-process',
+    'business-process-management-&-automation': 'business-process',
+    'digital-enterprise-erp-applications': 'digital-enterprise',
+    'enterprise-erp': 'digital-enterprise',
+    'cloud-infrastructure': 'cloud-solutions',
+    'cloud-infrastructure-solutions': 'cloud-solutions',
+  };
+  const resolvedId = aliasMap[rawId] || rawId;
+  const currentData = detailsData[resolvedId] || detailsData[detailId];
 
-  if (detailId === 'it-applications') {
+  if (resolvedId === 'it-applications') {
     return (
       <motion.div 
         initial={{ opacity: 0 }}
@@ -695,6 +888,13 @@ export default function ServiceOrSolutionDetail({ detailId }) {
               {currentData.desc}
             </p>
 
+            {currentData.slaDescription && (
+              <div className="rounded-2xl border border-blue-100 bg-blue-50/60 p-5">
+                <h3 className="text-base font-bold font-display text-brand-dark mb-2">SLA Audited Operations</h3>
+                <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-light">{currentData.slaDescription}</p>
+              </div>
+            )}
+
             <div className="space-y-4 pt-2">
               <h3 className="text-base font-bold font-display text-brand-dark border-l-4 border-blue-500 pl-3">Deployment Scope & Standard Deliveries</h3>
               
@@ -710,56 +910,150 @@ export default function ServiceOrSolutionDetail({ detailId }) {
               </ul>
             </div>
 
+            {currentData.keyFeatures && (
+              <div className="space-y-5 pt-2">
+                <h3 className="text-base font-bold font-display text-brand-dark border-l-4 border-blue-500 pl-3">Key Features</h3>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  {currentData.keyFeatures.map((feature) => (
+                    <div key={feature.title} className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                      <h4 className="font-bold text-brand-dark">{feature.title}</h4>
+                      <p className="mt-2 text-sm text-slate-600 leading-relaxed">{feature.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {currentData.benefits && (
+              <div className="space-y-4 pt-2">
+                <h3 className="text-base font-bold font-display text-brand-dark border-l-4 border-blue-500 pl-3">Business Benefits</h3>
+                <ul className="grid gap-3 sm:grid-cols-2">
+                  {currentData.benefits.map((benefit) => (
+                    <li key={benefit} className="flex gap-3 text-slate-600 text-sm sm:text-base leading-relaxed">
+                      <CheckCircle className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+                      <span>{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {currentData.supportMaintenance && (
+              <div className="space-y-3 pt-2">
+                <h3 className="text-base font-bold font-display text-brand-dark border-l-4 border-blue-500 pl-3">Support & Maintenance</h3>
+                <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-light">{currentData.supportMaintenance}</p>
+              </div>
+            )}
+
+            {currentData.whyChooseUs && (
+              <div className="space-y-4 pt-2">
+                <h3 className="text-base font-bold font-display text-brand-dark border-l-4 border-blue-500 pl-3">Why Choose GL Tech Services?</h3>
+                <ul className="space-y-3">
+                  {currentData.whyChooseUs.map((reason) => (
+                    <li key={reason} className="flex gap-3 text-slate-600 text-sm sm:text-base leading-relaxed">
+                      <CheckCircle className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+                      <span>{reason}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
           </div>
 
           {/* Sidebar */}
-          <div className="lg:col-span-4 space-y-6">
-            
-            <motion.div 
-              whileHover={{ y: -4, borderColor: 'rgba(59, 130, 246, 0.4)', boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)' }}
+          <div className="lg:col-span-4 space-y-6 lg:sticky lg:top-24 lg:self-start">
+            <motion.div
+              whileHover={{ y: -3 }}
               transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-              className="bg-[#091E42] text-white rounded-3xl p-6 sm:p-8 space-y-6 border border-slate-800 cursor-default relative overflow-hidden"
+              className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-7 shadow-sm"
             >
-              {/* Subtle mesh background on card */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl pointer-events-none" />
-              
-              <h3 className="text-lg font-bold font-display border-b border-blue-950 pb-3 relative z-10">Ecosystem & Tech Stack</h3>
-              
-              <div className="space-y-4 relative z-10">
+              <div className="flex items-start justify-between gap-4 border-b border-slate-100 pb-5">
                 <div>
-                  <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">Standard Tech / Protocols</span>
-                  <p className="text-sm font-semibold text-white mt-1">{currentData.techStack}</p>
+                  <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-blue-600">Service snapshot</span>
+                  <h3 className="mt-2 text-xl font-bold font-display text-brand-dark">Built around your operation</h3>
                 </div>
-                
-                <div>
-                  <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">SLA Protection</span>
-                  <p className="text-xs text-slate-300 mt-1 font-light leading-relaxed">
-                    All deployments are eligible for our SLA active monitoring and onsite technical response contracts.
-                  </p>
-                </div>
+                <div className="rounded-2xl bg-blue-50 p-3">{currentData.icon}</div>
+              </div>
 
-                <div className="pt-2">
-                  <a
-                    href="mailto:business@globx.co.in"
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs uppercase tracking-wider py-3.5 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-blue-950/40 transition-all cursor-pointer animate-none"
-                  >
-                    <span>Request Technical Sizing</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </a>
+              <div className="mt-5 space-y-5">
+                <div>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Category</span>
+                  <p className="mt-1 text-sm font-semibold text-slate-800">{currentData.category}</p>
+                </div>
+                <div>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Technology ecosystem</span>
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    {currentData.techStack.split(', ').map((technology) => (
+                      <span key={technology} className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-medium text-slate-600">{technology}</span>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Delivery approach</span>
+                  <div className="mt-3 grid grid-cols-3 gap-2 text-center">
+                    {['Assess', 'Deploy', 'Support'].map((stage, index) => (
+                      <div key={stage} className="rounded-xl bg-slate-50 px-2 py-3">
+                        <span className="block text-xs font-bold text-blue-600">0{index + 1}</span>
+                        <span className="mt-1 block text-[11px] font-semibold text-slate-600">{stage}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </motion.div>
 
-            <motion.div 
-              whileHover={{ y: -4, borderColor: 'rgba(147, 197, 253, 0.8)' }}
+            <motion.div
+              whileHover={{ y: -3 }}
               transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-              className="bg-blue-50 border border-blue-100 rounded-3xl p-6 space-y-3 cursor-default"
+              className="rounded-3xl border border-blue-100 bg-blue-50 p-6 sm:p-7"
             >
-              <h4 className="font-bold text-brand-dark text-sm sm:text-base">Need a custom topology?</h4>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-light">
-                Our network and systems engineers are available to review existing network diagrams, check wireless coverage maps, and provide free assessment reports.
-              </p>
+              <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-blue-600">What you can expect</span>
+              <ul className="mt-4 space-y-3">
+                {(currentData.benefits || currentData.features).slice(0, 4).map((item) => (
+                  <li key={item} className="flex gap-2 text-sm leading-relaxed text-slate-700">
+                    <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-blue-600" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <a
+                href="mailto:business@globx.co.in"
+                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 px-4 py-3.5 text-xs font-bold uppercase tracking-wider text-white shadow-lg shadow-blue-600/20 transition-colors hover:bg-blue-700"
+              >
+                Discuss this service
+                <ArrowRight className="h-4 w-4" />
+              </a>
             </motion.div>
+
+            <div className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-7 shadow-sm">
+              <div className="flex items-center justify-between gap-4">
+                <div>
+                  <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-slate-400">Ongoing care</span>
+                  <h3 className="mt-2 text-lg font-bold font-display text-brand-dark">Support coverage</h3>
+                </div>
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
+                  <CheckCircle className="h-5 w-5" />
+                </span>
+              </div>
+              <p className="mt-4 text-sm leading-relaxed text-slate-600">
+                {currentData.supportMaintenance || 'Our technical team provides monitoring, troubleshooting, maintenance, and responsive support to keep your environment reliable.'}
+              </p>
+              <div className="mt-5 grid grid-cols-3 gap-2 border-t border-slate-100 pt-5 text-center">
+                <div>
+                  <span className="block text-sm font-bold text-blue-600">24/7</span>
+                  <span className="mt-1 block text-[10px] font-semibold uppercase tracking-wide text-slate-400">Monitoring</span>
+                </div>
+                <div>
+                  <span className="block text-sm font-bold text-blue-600">SLA</span>
+                  <span className="mt-1 block text-[10px] font-semibold uppercase tracking-wide text-slate-400">Response</span>
+                </div>
+                <div>
+                  <span className="block text-sm font-bold text-blue-600">Pro</span>
+                  <span className="mt-1 block text-[10px] font-semibold uppercase tracking-wide text-slate-400">Guidance</span>
+                </div>
+              </div>
+            </div>
 
           </div>
 

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLenis } from 'lenis/react';
+import Logo from './Logo';
 
 export default function Navbar({ onNavigate, currentPage }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -22,9 +23,14 @@ export default function Navbar({ onNavigate, currentPage }) {
 
   const services = [
     { name: 'Desktop Integration', id: 'desktop-integration' },
+    { name: 'IT Infrastructure Led Services', id: 'it-infrastructure-led' },
     { name: 'Server & Storage Solutions', id: 'server-storage-solutions' },
     { name: 'Networking Solutions', id: 'networking-solutions' },
+    { name: 'Cloud Infrastructure', id: 'cloud-solutions' },
     { name: 'Security Equipment', id: 'security-equipment' },
+    { name: 'Software Development', id: 'it-applications' },
+    { name: 'Business Process Automation', id: 'business-process' },
+    { name: 'Digital Enterprise ERP', id: 'digital-enterprise' },
     { name: 'CCTV Solutions', id: 'cctv-solutions' }
   ];
 
@@ -110,6 +116,7 @@ export default function Navbar({ onNavigate, currentPage }) {
             className="flex items-center cursor-pointer"
             onClick={() => handleLinkClick('home')}
           >
+            <Logo className="h-12 w-12 mr-2" />
             <span className="text-xl sm:text-2xl font-display font-bold tracking-tight text-[#F8FAFC] transition-colors duration-300">
               GLTech Solutions
             </span>
@@ -143,7 +150,6 @@ export default function Navbar({ onNavigate, currentPage }) {
                   <button
                     key={item.id}
                     onClick={() => handleLinkClick('service-detail', item.id)}
-                                        onClick={() => handleLinkClick('service-detail', item.id)}
                     className="w-full text-left px-3 py-2 text-sm rounded-lg text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-[#1E293B] transition-all duration-100 font-medium cursor-pointer"
                   >
                     {item.name}
@@ -223,7 +229,13 @@ export default function Navbar({ onNavigate, currentPage }) {
             </button>
           </nav>
 
-
+          <motion.button
+            whileTap={{ scale: 0.97 }}
+            onClick={() => handleLinkClick('')}
+            className="hidden lg:inline-flex items-center px-4 py-2.5 ml-4 rounded-md bg-[#0EA5E9] text-sm font-semibold text-white hover:bg-[#0284C7] transition-colors cursor-pointer"
+          >
+            Get a Quote
+          </motion.button>
 
           {/* Mobile menu button */}
           <div className="flex items-center lg:hidden">
@@ -291,7 +303,6 @@ export default function Navbar({ onNavigate, currentPage }) {
                           whileTap={{ scale: 0.98 }}
                           key={item.id}
                           onClick={() => handleLinkClick('service-detail', item.id)}
-                                                    onClick={() => handleLinkClick('service-detail', item.id)}
                           className="block w-full text-left px-4 py-2 text-sm text-[#94A3B8] hover:text-[#3B82F6] font-medium cursor-pointer"
                         >
                           {item.name}
@@ -419,6 +430,15 @@ export default function Navbar({ onNavigate, currentPage }) {
                 className="block w-full text-left px-4 py-2.5 rounded-lg text-base font-semibold text-[#F8FAFC] hover:bg-[#1E293B] hover:text-[#3B82F6] cursor-pointer"
               >
                 Contact
+              </motion.button>
+
+              <motion.button
+                variants={mobileItemVariants}
+                whileTap={{ scale: 0.97 }}
+                onClick={() => handleLinkClick('contact')}
+                className="block w-full text-center px-4 py-2.5 mt-2 rounded-lg bg-[#0EA5E9] text-base font-semibold text-white hover:bg-[#0284C7] cursor-pointer"
+              >
+                Get a Quote
               </motion.button>
 
 

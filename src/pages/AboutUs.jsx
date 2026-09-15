@@ -9,7 +9,7 @@ import {
   Briefcase,
   Zap,
   Shield
-} from 'lucide-react'; 
+} from 'lucide-react';
 import teamCollaboration from '../assets/solutions/About Us photo.jpg';
 import serverRacks from '../assets/server_racks.png';
 import fiberNetwork from '../assets/fiber_network.png';
@@ -155,10 +155,10 @@ export default function AboutUs() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="lg:col-span-6 relative"
               viewport={{ once: true, amount: 0.15 }}
-             
+
             >
               <div className="relative rounded-2xl overflow-hidden border border-slate-200/90 shadow-2xl shadow-slate-300/40 bg-white group">
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-40 z-10"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-40 z-10"></div>
                 <img src={teamCollaborationTeam} alt="GL Tech Solutions Corporate Team" className="w-full h-[400px] object-cover object-center group-hover:scale-105 transition-transform duration-700" />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/75 to-transparent p-6 pt-20">
                   <span className="text-xs font-bold uppercase tracking-wider text-cyan-200">GL Tech Solutions</span>
@@ -288,9 +288,9 @@ export default function AboutUs() {
               </h2>
 
               <p className="text-sky-100 font-light text-sm sm:text-base max-w-2xl leading-relaxed">
-                 At GL Tech Solutions, we bring together hardware, software, networking,
-                 security, and surveillance technologies into unified solutions designed
-                 around your business needs.
+                At GL Tech Solutions, we bring together hardware, software, networking,
+                security, and surveillance technologies into unified solutions designed
+                around your business needs.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
@@ -323,9 +323,14 @@ export default function AboutUs() {
                   <MapPin className="w-5 h-5 text-white shrink-0 mt-1" />
                   <div>
                     <span className="text-[10px] text-sky-200 font-bold uppercase tracking-wider block">Headquarters</span>
-                    <span className="text-white text-xs sm:text-sm leading-normal block">
-                      Plot No- HIG/141, Kanan Vihar, Phase-1, Chadrashekharpur, Bhubaneswar - 751024
-                    </span>
+                    <a
+                      href="https://maps.app.goo.gl/TAJB76G4aZbbQiBD9"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white hover:text-sky-200 transition-colors text-xs sm:text-sm leading-normal block underline decoration-sky-300/50 underline-offset-2"
+                    >
+                      Plot No-257, Saheed Nagar, Bhubaneswar, Odisha - 751007
+                    </a>
                   </div>
                 </div>
 
