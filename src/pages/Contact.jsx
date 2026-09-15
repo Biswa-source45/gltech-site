@@ -88,7 +88,7 @@ export default function Contact() {
                 </div> */}
                 <div>
                   <span className="font-semibold text-brand-dark block text-xs uppercase tracking-wider text-slate-400">Headquarters Address</span>
-                  <span className="leading-relaxed text-sm"> GL Tech Solutions Pvt. Ltd., Saheed Nagar, Bhubaneswar, Odisha - 751007</span>
+                  <span className="leading-relaxed text-sm"> GL Tech Solutions PVT LTD, Plot No-257, Ground Floor, Saheed Nagar, Bhubaneswar, Odisha - 751007</span>
                 </div>
               </li>
               <li className="flex gap-4 items-start">
